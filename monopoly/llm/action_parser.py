@@ -164,6 +164,72 @@ class ActionParser:
             return lines[0]
         
         return llm_response.strip()
+    
+    @staticmethod
+    def parse_trade_proposal(llm_response: str) -> Optional[Tuple[str, List[str], List[str], int]]:
+        """
+        Parse a trade proposal from LLM response.
+        
+        Format: TRADE_PROPOSE:<target_player>:<properties_to_give>:<properties_to_receive>:<cash_amount>
+        Properties are comma-separated.
+        
+        Args:
+            llm_response: The LLM's text response
+            
+        Returns:
+            (target_player_name, properties_to_give_list, properties_to_receive_list, cash_amount) or None
+        """
+        try:
+            response_upper = llm_response.strip().upper()
+            if "TRADE_PROPOSE:" not in response_upper or "NO_TRADE" in response_upper:
+                return None
+            
+            # Extract the proposal part
+            pattern = r"TRADE_PROPOSE:\s*([^:]+):\s*([^:]*):\s*([^:]*):\s*(-?\d+)"
+            match = re.search(pattern, response_upper)
+            if not match:
+                return None
+            
+            target_player = match.group(1).strip()
+            props_give_str = match.group(2).strip()
+            props_receive_str = match.group(3).strip()
+            cash_str = match.group(4).strip()
+            
+            # Parse properties (comma-separated, filter empty)
+            props_give = [p.strip() for p in props_give_str.split(',') if p.strip()] if props_give_str else []
+            props_receive = [p.strip() for p in props_receive_str.split(',') if p.strip()] if props_receive_str else []
+            
+            # Parse cash amount
+            cash = int(cash_str) if cash_str else 0
+            
+            return (target_player, props_give, props_receive, cash)
+        except Exception:
+            return None
+    
+    @staticmethod
+    def parse_negotiation_response(llm_response: str) -> Optional[str]:
+        """
+        Parse negotiation response to detect accept/reject/end.
+        
+        Args:
+            llm_response: The LLM's text response
+            
+        Returns:
+            'accept', 'reject', 'end', or None (continue negotiation)
+        """
+        try:
+            response_upper = llm_response.strip().upper()
+            
+            if "TRADE_ACCEPT" in response_upper:
+                return 'accept'
+            if "TRADE_REJECT" in response_upper or "REJECT" in response_upper[:20]:
+                return 'reject'
+            if "TRADE_END" in response_upper or "END_NEGOTIATION" in response_upper:
+                return 'end'
+            
+            return None
+        except Exception:
+            return None
 
 
 

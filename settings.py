@@ -2,8 +2,8 @@
 from dataclasses import dataclass
 from typing import FrozenSet
 
-HERO = "Hero"
-PLAYER_2 = "Alice"
+HERO = "LLM1"
+PLAYER_2 = "LLM2"
 PLAYER_3 = "Bob"
 PLAYER_4 = "Charly"
 
@@ -29,15 +29,15 @@ class GameMechanics:
 
 @dataclass(frozen=True)
 class SimulationSettings:
-    n_games: int = 1_000  # Number of games to simulate
-    n_moves: int = 1000  # Max Number of moves per game
+    n_games: int = 1  # Number of games to simulate
+    n_moves: int = 50  # Max Number of moves per game (reduced for short games)
     seed: int = 0  # Random seed to start simulation with
     multi_process: int = 4  # Number of parallel processes to use in the simulation
     
     # Cash that will be considered cannot go bankrupt. See this paper that estimates the probability that the game
     # will last forever. https://www.researchgate.net/publication
     # /224123876_Estimating_the_probability_that_the_game_of_Monopoly_never_ends
-    never_bankrupt_cash: int = 5000
+    never_bankrupt_cash: int = 2000  # Lowered to end games faster when players get rich
 
 
 @dataclass(frozen=True)
@@ -76,10 +76,10 @@ class GameSettings:
     # Initial money (a single integer if it is the same for everybody or a dict of player names and cash)
     # for example, either starting_money = 1500 or a dictionary with player names as keys and int values
     starting_money = {
-        HERO: 1500,
-        PLAYER_2: 1500,
-        PLAYER_3: 1500,
-        PLAYER_4: 1500
+        HERO: 1000,  # Reduced for faster games
+        PLAYER_2: 1000,
+        PLAYER_3: 1000,
+        PLAYER_4: 1000
     }
     
     # Initial properties (a dictionary with player names as keys and a list of property numbers as values)

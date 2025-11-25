@@ -20,6 +20,7 @@ class Log:
         self.log_file_name = log_file_name
         self.content = []
         self.disabled = disabled
+        self._flushed_count = 0  # Track how many items have been flushed
 
     def add(self, data):
         """ Add a line to a Log
@@ -29,15 +30,31 @@ class Log:
         self.content.append(data)
 
     def save(self):
-        """ Write out the log
+        """ Write out the log (writes any remaining content not yet flushed)
         """
         if self.disabled:
             return
-        with self.lock:
-            with open(self.log_file_name, "a", encoding="utf-8") as logfile:
-                logfile.write("\n".join(self.content))
-                if self.content:
+        remaining = self.content[self._flushed_count:]
+        if remaining:
+            with self.lock:
+                with open(self.log_file_name, "a", encoding="utf-8") as logfile:
+                    logfile.write("\n".join(remaining))
                     logfile.write("\n")
+                self._flushed_count = len(self.content)
+    
+    def flush(self):
+        """ Flush current content to file immediately (for real-time updates)
+        """
+        if self.disabled or not self.content:
+            return
+        with self.lock:
+            new_content = self.content[self._flushed_count:]
+            if new_content:
+                with open(self.log_file_name, "a", encoding="utf-8") as logfile:
+                    logfile.write("\n".join(new_content))
+                    logfile.write("\n")
+                    logfile.flush()
+                self._flushed_count = len(self.content)
 
     def reset(self, first_line=""):
         """ Empty the log file, write first_line if provided

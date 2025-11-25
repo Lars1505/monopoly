@@ -1,5 +1,12 @@
 """Run simulation with LLM players."""
 
+import sys
+from pathlib import Path
+
+# Add project root to Python path
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
+
 import random
 from tqdm.contrib.concurrent import process_map
 

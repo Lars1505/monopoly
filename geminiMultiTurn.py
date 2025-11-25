@@ -2,7 +2,7 @@ import os
 from google import genai
 import ollama
 
-client = genai.Client(api_key="")
+client = genai.Client(api_key="AIzaSyBa3kG9Sc2On_DeaMGENdDR9rglISWSfUo")
 
 
 

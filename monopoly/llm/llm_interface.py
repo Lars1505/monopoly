@@ -16,9 +16,9 @@ class GeminiChat:
             model=model,
             config=types.GenerateContentConfig(
                 system_instruction="""You play Monopoly. Respond with ONLY the action keyword - no explanations.
-Buy decision: BUY or PASS
-Improve decision: IMPROVE:<property_name> or NO_IMPROVEMENT
-Keep responses under 20 tokens.""",
+                Buy decision: BUY or PASS
+                Improve decision: IMPROVE:<property_name> or NO_IMPROVEMENT
+                Keep responses under 20 tokens.""",
                 thinking_config=types.ThinkingConfig(thinking_budget=0)
             ),
         )
@@ -47,10 +47,16 @@ class LlamaChat:
         # Add system instruction as first message
         self.history.append({
             'role': 'system',
-            'content': """You play Monopoly. Respond with ONLY the action keyword - no explanations.
-Buy decision: BUY or PASS
-Improve decision: IMPROVE:<property_name> or NO_IMPROVEMENT
-Keep responses under 20 tokens."""
+            'content': """You are playing Monopoly.
+            You can BUY properties, PASS on buying, IMPROVE properties or choose NO_IMPROVEMENT.
+            You can negotiate trades with the other player, you only have one round to negotiate, so make your moves wisely.
+            The other player can accept, reject or counter your offer.
+            Other users can also negotiate trades with you, you can accept or reject their counter-offers or make a counter-offer.
+            but you can only counter once.
+            Give your reasons briefly if needed.
+            You will respond with NEGOTIATE:<offer_details> when you want to request negotiation, 
+            ACCEPT, REJECT, BUY, PASS, IMPROVE:<property_name>, or NO_IMPROVEMENT with brief explanations. 
+            """
         })
     
     def send_message(self, message: str) -> str:
@@ -58,12 +64,11 @@ Keep responses under 20 tokens."""
         try:
             # Add user message to history
             self.history.append({'role': 'user', 'content': message})
-            
             # Get response from Ollama
             response = ollama.chat(model=self.model, messages=self.history)
             
             # Extract reply
-            reply = response['message']['content'].strip()
+            reply = response['message']['content']
             
             # Add assistant reply to history
             self.history.append({'role': 'assistant', 'content': reply})

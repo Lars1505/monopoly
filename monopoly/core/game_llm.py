@@ -108,7 +108,18 @@ def monopoly_game_llm(game_number_and_seeds):
     
     # Setup players and create individual chat instances for each LLM player
     players, player_chats = setup_players_llm(board, dice)
-    
+    LLM1_chat = player_chats.get("LLM1", None)
+    LLM2_chat = player_chats.get("LLM2", None)
+    r1 = LLM1_chat.send_message("You are playing Monopoly, you want to negotiate with the other players now") # assume engine output
+    print(r1)
+    if r1.startswith("NEGOTIATE"):
+        r2 = LLM2_chat.send_message(r1 + "It's your turn to respond to the trade proposal in Monopoly, you can accept, reject or counter the offer, you can only counter once.") # assume engine output
+        print(r2)
+        r1 = LLM1_chat.send_message(r2 + "You can only accept or reject this deal for this turn") # assume engine output
+        print(r1)
+    else: 
+        r2 = LLM2_chat.send_message("<engine output>: You are playing Monopoly, you are at Park Place, with cash $800.") # assume engine output
+        print(r2)    
     # Initialize chat history files for real-time updates
     history_dir = Path("gameHistory")
     history_dir.mkdir(exist_ok=True)

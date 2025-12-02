@@ -9,7 +9,7 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBa3kG9Sc2On_DeaMGENdDR9rglIS
 # Each player can have their own provider and model
 # Format: {"player_name": {"provider": "gemini"|"llama", "model": "model_name", "api_key": "optional"}}
 LLM_PLAYER_CONFIG = {
-    "LLM1": {"provider": "llama", "model": "gpt-oss:120b-cloud"},
+    "LLM1": {"provider": "llama", "model": "gpt-oss:20b-cloud"},
     "LLM2": {"provider": "llama", "model": "gpt-oss:20b-cloud"},
     # Example for multiple players:
     # "Alice": {"provider": "gemini", "model": "gemini-2.0-flash-exp"},

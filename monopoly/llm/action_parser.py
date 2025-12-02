@@ -207,29 +207,98 @@ class ActionParser:
             return None
     
     @staticmethod
-    def parse_negotiation_response(llm_response: str) -> Optional[str]:
+    def parse_negotiation_response(llm_response: str) -> Tuple[str, Optional[dict]]:
         """
-        Parse negotiation response to detect accept/reject/end.
+        Parse negotiation response to detect accept/reject/counter.
         
         Args:
             llm_response: The LLM's text response
             
         Returns:
-            'accept', 'reject', 'end', or None (continue negotiation)
+            Tuple of (action, counter_offer_dict)
+            - action: 'accept', 'reject', 'counter', or 'unclear'
+            - counter_offer_dict: If action is 'counter', contains the counter-offer details, else None
         """
         try:
             response_upper = llm_response.strip().upper()
             
-            if "TRADE_ACCEPT" in response_upper:
-                return 'accept'
-            if "TRADE_REJECT" in response_upper or "REJECT" in response_upper[:20]:
-                return 'reject'
-            if "TRADE_END" in response_upper or "END_NEGOTIATION" in response_upper:
-                return 'end'
+            # Check for explicit accept
+            if "TRADE_ACCEPT" in response_upper or response_upper.startswith("ACCEPT"):
+                return ('accept', None)
             
-            return None
+            # Check for explicit reject
+            if "TRADE_REJECT" in response_upper or response_upper.startswith("REJECT"):
+                return ('reject', None)
+            
+            # Check for counter-offer
+            # Format: TRADE_COUNTER:<properties_to_give>:<properties_to_receive>:<cash_amount>
+            if "TRADE_COUNTER:" in response_upper:
+                pattern = r"TRADE_COUNTER:\s*([^:]*):\s*([^:]*):\s*(-?\d+)"
+                match = re.search(pattern, response_upper)
+                if match:
+                    props_give_str = match.group(1).strip()
+                    props_receive_str = match.group(2).strip()
+                    cash_str = match.group(3).strip()
+                    
+                    props_give = [p.strip() for p in props_give_str.split(',') if p.strip()] if props_give_str else []
+                    props_receive = [p.strip() for p in props_receive_str.split(',') if p.strip()] if props_receive_str else []
+                    cash = int(cash_str) if cash_str else 0
+                    
+                    counter_offer = {
+                        'give': props_give,
+                        'receive': props_receive,
+                        'cash': cash
+                    }
+                    return ('counter', counter_offer)
+            
+            # If unclear or conversational, treat as reject
+            # (Prevents endless discussion loops)
+            return ('unclear', None)
         except Exception:
-            return None
+            return ('unclear', None)
+    
+    @staticmethod
+    def parse_batched_strategy(llm_response: str) -> dict:
+        """
+        Parse batched turn strategy response.
+        Expected format:
+        A) TRADE_PROPOSE:... or NO_TRADE
+        B) IMPROVE:... or NO_IMPROVEMENT
+        
+        Returns dict with 'trade_proposal' and 'improvements' keys.
+        """
+        result = {'trade_proposal': None, 'improvements': []}
+        
+        try:
+            # Extract section A (trade)
+            a_match = re.search(r'A\)\s*(.+?)(?=B\)|$)', llm_response, re.IGNORECASE | re.DOTALL)
+            if a_match:
+                a_text = a_match.group(1).strip()
+                if "NO_TRADE" not in a_text.upper():
+                    parsed_trade = ActionParser.parse_trade_proposal(a_text)
+                    if parsed_trade:
+                        target, give, receive, cash = parsed_trade
+                        result['trade_proposal'] = {
+                            'target': target,
+                            'give': give,
+                            'receive': receive,
+                            'cash': cash
+                        }
+            
+            # Extract section B (improvements)
+            b_match = re.search(r'B\)\s*(.+?)$', llm_response, re.IGNORECASE | re.DOTALL)
+            if b_match:
+                b_text = b_match.group(1).strip()
+                if "NO_IMPROVEMENT" not in b_text.upper() and "IMPROVE:" in b_text.upper():
+                    improve_match = re.search(r'IMPROVE:\s*(.+?)(?:\n|$)', b_text, re.IGNORECASE)
+                    if improve_match:
+                        props = improve_match.group(1).strip()
+                        result['improvements'] = [p.strip() for p in props.split(',') if p.strip()]
+        
+        except Exception:
+            pass
+        
+        return result
 
 
 

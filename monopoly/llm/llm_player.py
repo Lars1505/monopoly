@@ -1,5 +1,6 @@
 """LLM-based player using Gemini multi-turn chat."""
 
+import re
 from typing import List, Optional, Tuple
 from monopoly.core.player import Player
 from monopoly.core.board import Board
@@ -15,6 +16,8 @@ class LLMPlayer(Player):
         super().__init__(name, settings)
         self.chat = chat
         self.action_parser = ActionParser()
+        self._current_turn = 0
+        self._last_strategy_call = -999  # Track when we last called batched strategy
     
     def _build_full_context(self, board: Board, players: List[Player]) -> str:
         """Build concise full game context - always included in every message."""
@@ -82,7 +85,10 @@ class LLMPlayer(Player):
             prompt = f"""You:${self.money},net${self.net_worth()},pos {board.cells[self.position].name},{len(self.owned)}props,{landed_property.group}={len(owned_in_group)}/{total_in_group}
 Property:{landed_property.name},cost${landed_property.cost_base},rent${landed_property.rent_base},after${self.money - landed_property.cost_base}
 Same group:{'|'.join(group_info) if group_info else 'None'}
-Decision:BUY or PASS"""
+
+Respond with EXACTLY one of:
+- BUY (purchase this property)
+- PASS (skip this property)"""
             
             try:
                 response = self._send_message(prompt, board, players)
@@ -108,59 +114,88 @@ Decision:BUY or PASS"""
             super().handle_landing_on_property(board, players, dice, log)
     
     def make_a_move(self, board, players, dice, log):
-        """Store players context and handle LLM trading before rule-based trading."""
+        """Store players context and handle batched LLM strategy (trade + improvements)."""
         self._current_players = players
+        self._current_turn += 1
         
-        # Handle LLM-to-LLM trading before rule-based trading
-        try:
-            proposal = self.propose_trade_to_llm(board, players, log)
-            if proposal:
-                target_name = proposal['target']
-                # Case-insensitive match for player name
-                target_player = next((p for p in players if p.name.upper() == target_name.upper() and not p.is_bankrupt), None)
-                
-                if target_player and isinstance(target_player, LLMPlayer):
-                    success, agreement = self.negotiate_trade(self, target_player, proposal, board, players, log)
-                    if success and agreement:
-                        if self.execute_llm_trade(self, target_player, agreement, board, players, log):
-                            log.add(f"{self.name} and {target_player.name} completed LLM trade")
-                elif target_player:
-                    log.add(f"{self.name} tried to trade with non-LLM player {target_name}, skipping")
-        except Exception as e:
-            log.add(f"{self.name} LLM trading error: {e}, continuing normally")
+        # Batched strategy call (every 3 turns)
+        strategy = None
+        if self._current_turn % 3 == 1 and len(self.owned) >= 2:
+            strategy = self.get_turn_strategy(board, players, log)
+            
+            # Handle trade proposal if present
+            if strategy.get('trade_proposal'):
+                try:
+                    proposal = strategy['trade_proposal']
+                    target_name = proposal['target']
+                    target_player = next((p for p in players if p.name.upper() == target_name.upper() and not p.is_bankrupt), None)
+                    
+                    if target_player and isinstance(target_player, LLMPlayer):
+                        success, final_proposal, final_proposer, final_target = self.negotiate_trade(
+                            self, target_player, proposal, board, players, log
+                        )
+                        if success and final_proposal and final_proposer and final_target:
+                            if self.execute_llm_trade(final_proposer, final_target, final_proposal, board, players, log):
+                                log.add(f"✓ Trade completed: {final_proposer.name} ↔ {final_target.name}")
+                    elif target_player:
+                        log.add(f"{self.name} tried to trade with non-LLM player {target_name}, skipping")
+                except Exception as e:
+                    log.add(f"{self.name} trade execution error: {e}")
         
-        return super().make_a_move(board, players, dice, log)
+        # Execute normal move (dice roll, movement, rent, etc.)
+        result = super().make_a_move(board, players, dice, log)
+        
+        # Execute improvement strategy if we have one (after movement/purchases)
+        if strategy and strategy.get('improvements'):
+            try:
+                self._execute_improvement_strategy(strategy['improvements'], board, log)
+            except Exception as e:
+                log.add(f"{self.name} improvement execution error: {e}")
+        
+        return result
     
     def improve_properties(self, board, log):
-        """Override property improvement."""
+        """
+        Override property improvement.
+        NOTE: This is now a fallback method. Improvements are normally handled
+        via batched strategy in make_a_move(). This only runs if batched strategy
+        wasn't used (e.g., non-LLM turn or error case).
+        """
+        # Check if improvements were already handled by batched strategy this turn
+        if hasattr(self, '_improvements_handled_this_turn') and self._improvements_handled_this_turn:
+            return
+        
         improvable = self._get_improvable_properties(board)
         if not improvable:
             return
         
-        max_improvements = 5
-        for _ in range(max_improvements):
-            if not improvable:
-                break
+        # Single call for all improvements (simplified from iterative)
+        props_list = [f"{p.name}:${p.cost_house}" for p in improvable]
+        players = getattr(self, '_current_players', [])
+        
+        prompt = f"""You:${self.money},net${self.net_worth()}
+Can improve: {', '.join(props_list)}
+
+Respond with EXACTLY one of:
+- IMPROVE:<prop1>,<prop2>,... (comma-separated, max 5)
+- NO_IMPROVEMENT"""
+        
+        try:
+            response = self._send_message(prompt, board, players)
+            cleaned = self.action_parser.clean_response(response)
             
-            props_list = [f"{p.name}:${p.cost_house},{'hotel' if p.has_houses == 4 else f'house{p.has_houses + 1}'}" for p in improvable]
+            # Parse as batch improvement
+            if "NO_IMPROVEMENT" in cleaned.upper():
+                return
             
-            players = getattr(self, '_current_players', [])
-            prompt = f"""You:${self.money},net${self.net_worth()},pos {board.cells[self.position].name}
-Can improve:{'|'.join(props_list)}
-Decision:IMPROVE:<name> or NO_IMPROVEMENT"""
-            
-            try:
-                response = self._send_message(prompt, board, players)
-                cleaned = self.action_parser.clean_response(response)
-                prop = self.action_parser.parse_improve_decision(cleaned, improvable)
-                
-                if prop is None or self.money - prop.cost_house < self.settings.unspendable_cash:
-                    break
-                
-                self._perform_improvement(prop, board, log)
-                improvable = self._get_improvable_properties(board)
-            except Exception:
-                break
+            if "IMPROVE:" in cleaned.upper():
+                improve_match = re.search(r'IMPROVE:\s*(.+?)(?:\n|$)', cleaned, re.IGNORECASE)
+                if improve_match:
+                    props_str = improve_match.group(1).strip()
+                    property_names = [p.strip() for p in props_str.split(',') if p.strip()]
+                    self._execute_improvement_strategy(property_names, board, log)
+        except Exception as e:
+            log.add(f"{self.name} improvement error: {e}")
     
     def _get_improvable_properties(self, board: Board) -> List[Property]:
         """Get list of properties that can be improved."""
@@ -194,6 +229,81 @@ Decision:IMPROVE:<name> or NO_IMPROVEMENT"""
             self.money -= prop.cost_house
             log.add(f"{self} (LLM) built hotel on {prop} for ${prop.cost_house}")
     
+    def get_turn_strategy(self, board: Board, players: List[Player], log) -> dict:
+        """
+        Get batched decisions for trade proposal and improvements.
+        Returns dict with 'trade_proposal' and 'improvements' keys.
+        """
+        # Skip if no properties to trade or improve
+        if len(self.owned) < 2:
+            return {'trade_proposal': None, 'improvements': []}
+        
+        # Build improvable properties list
+        improvable = self._get_improvable_properties(board)
+        improvable_str = ', '.join([f"{p.name}:${p.cost_house}" for p in improvable]) if improvable else "None"
+        
+        # Build LLM player list
+        llm_players = [p.name for p in players if isinstance(p, LLMPlayer) and p != self and not p.is_bankrupt]
+        llm_list = ', '.join(llm_players) if llm_players else "None"
+        
+        # Skip if nothing to do
+        if not llm_players and not improvable:
+            return {'trade_proposal': None, 'improvements': []}
+        
+        prompt = f"""TURN STRATEGY - Provide answers for ALL sections:
+
+A) TRADE PROPOSAL (you can propose now, only every 3 turns)
+   Available LLM players: {llm_list}
+   Your properties: {', '.join([p.name for p in self.owned[:5]])}{'...' if len(self.owned) > 5 else ''}
+   
+   Respond with:
+   - NO_TRADE, or
+   - TRADE_PROPOSE:<player>:<props_you_give>:<props_you_receive>:<cash>
+   
+   Example: TRADE_PROPOSE:LLM2:Park Place:Boardwalk:200
+
+B) PROPERTY IMPROVEMENTS (you have ${self.money})
+   Can improve: {improvable_str}
+   
+   Respond with:
+   - NO_IMPROVEMENT, or
+   - IMPROVE:<prop1>,<prop2>,... (comma-separated, max 5)
+   
+   Example: IMPROVE:Park Place,Boardwalk
+
+Respond in this exact format:
+A) [your answer]
+B) [your answer]"""
+        
+        try:
+            response = self._send_message(prompt, board, players)
+            parsed = self.action_parser.parse_batched_strategy(response)
+            log.add(f"{self.name} batched strategy: trade={bool(parsed.get('trade_proposal'))}, improvements={len(parsed.get('improvements', []))}")
+            return parsed
+        except Exception as e:
+            log.add(f"{self.name} strategy parsing error: {e}")
+            return {'trade_proposal': None, 'improvements': []}
+    
+    def _execute_improvement_strategy(self, property_names: List[str], board: Board, log):
+        """Execute pre-planned improvements from batched strategy."""
+        improvable = self._get_improvable_properties(board)
+        built_count = 0
+        
+        for prop_name in property_names:
+            if built_count >= 5:
+                break
+            # Find matching property (case-insensitive, partial match)
+            prop = next((p for p in improvable if prop_name.upper() in p.name.upper()), None)
+            if prop and self.money >= prop.cost_house + self.settings.unspendable_cash:
+                self._perform_improvement(prop, board, log)
+                improvable = self._get_improvable_properties(board)
+                built_count += 1
+            else:
+                if not prop:
+                    log.add(f"{self.name} tried to improve unknown property: {prop_name}")
+                else:
+                    log.add(f"{self.name} insufficient cash to improve {prop.name}")
+    
     def propose_trade_to_llm(self, board: Board, players: List[Player], log) -> Optional[dict]:
         """Propose a trade to another LLM player. Returns proposal dict or None."""
         try:
@@ -202,10 +312,27 @@ Decision:IMPROVE:<name> or NO_IMPROVEMENT"""
             if not llm_players:
                 return None
             
-            llm_list = ','.join(llm_players)
-            prompt = f"""Do you want to propose a trade? Optional. You can ONLY trade with other LLM players: {llm_list}
-Format: TRADE_PROPOSE:<LLM_player_name>:<properties_to_give>:<properties_to_receive>:<cash_amount> or NO_TRADE
-Properties should be comma-separated property names. Cash can be negative if you want to receive money."""
+            llm_list = ', '.join(llm_players)
+            prompt = f"""Do you want to propose a trade? You can ONLY trade with other LLM players: {llm_list}
+
+Respond with EXACTLY one of:
+
+1. NO_TRADE (skip trading this turn)
+
+2. TRADE_PROPOSE:<player>:<props_you_give>:<props_you_receive>:<cash>
+   Format details:
+   - <player>: Target player name (one of: {llm_list})
+   - <props_you_give>: Properties you give (comma-separated, or empty)
+   - <props_you_receive>: Properties you receive (comma-separated, or empty)
+   - <cash>: Cash amount (positive = you give, negative = you receive)
+   
+   Examples:
+   - TRADE_PROPOSE:{llm_players[0]}:Park Place:Boardwalk:200
+     (You give Park Place + $200, receive Boardwalk)
+   - TRADE_PROPOSE:{llm_players[0]}::Reading Railroad:-300
+     (You give nothing, receive Reading Railroad + $300)
+   - TRADE_PROPOSE:{llm_players[0]}:Baltic Avenue,Park Place:Boardwalk,Short Line:0
+     (Straight property swap, no cash)"""
             
             response = self._send_message(prompt, board, players)
             parsed = self.action_parser.parse_trade_proposal(response)
@@ -224,58 +351,89 @@ Properties should be comma-separated property names. Cash can be negative if you
             return None
     
     def negotiate_trade(self, proposer: 'LLMPlayer', target: 'LLMPlayer', proposal: dict, 
-                       board: Board, players: List[Player], log) -> Tuple[bool, Optional[dict]]:
-        """Negotiate trade between two LLM players. Returns (success, agreement)."""
+                       board: Board, players: List[Player], log) -> Tuple[bool, Optional[dict], Optional['LLMPlayer'], Optional['LLMPlayer']]:
+        """
+        Negotiate trade between two LLM players using structured counter-offers.
+        Max 3 counter-offers allowed per negotiation.
+        
+        Returns (success, final_proposal_dict, final_proposer, final_target)
+        Note: proposer/target may swap during counter-offers, so final values are returned.
+        """
         try:
-            # Build proposal details string
-            give_str = ','.join(proposal['give']) if proposal['give'] else 'nothing'
-            receive_str = ','.join(proposal['receive']) if proposal['receive'] else 'nothing'
-            cash_str = f"${proposal['cash']}" if proposal['cash'] != 0 else "no cash"
+            current_proposal = proposal
+            current_proposer = proposer
+            current_responder = target
+            counter_count = 0
+            max_counters = 3
             
-            initial_prompt = f"""You received a trade proposal from {proposer.name}. You can ONLY negotiate with LLM players.
-Original proposal: {proposer.name} gives {give_str} and {cash_str}, receives {receive_str} from you.
-Respond with TRADE_ACCEPT, TRADE_REJECT, or discuss (but terms stay the same)."""
+            while counter_count <= max_counters:
+                # Build proposal details string
+                give_str = ', '.join(current_proposal['give']) if current_proposal['give'] else 'nothing'
+                receive_str = ', '.join(current_proposal['receive']) if current_proposal['receive'] else 'nothing'
+                
+                if current_proposal['cash'] > 0:
+                    cash_str = f"${current_proposal['cash']} cash"
+                elif current_proposal['cash'] < 0:
+                    cash_str = f"${abs(current_proposal['cash'])} cash (you give)"
+                else:
+                    cash_str = "no cash"
+                
+                # Send proposal to responder
+                if counter_count == 0:
+                    prompt = f"""You received a trade proposal from {current_proposer.name}.
+Proposal: {current_proposer.name} gives you [{give_str}] and [{cash_str}], receives [{receive_str}] from you.
+
+Respond with ONE of:
+- TRADE_ACCEPT (accept the deal as-is)
+- TRADE_REJECT (decline and end negotiation)
+- TRADE_COUNTER:<props_you_give>:<props_you_receive>:<cash> (make a counter-offer)
+
+Example counter: TRADE_COUNTER:Park Place:Boardwalk,Reading Railroad:200
+This means: You give Park Place, receive Boardwalk + Reading Railroad + $200"""
+                else:
+                    prompt = f"""Counter-offer #{counter_count} from {current_proposer.name}.
+New proposal: {current_proposer.name} gives you [{give_str}] and [{cash_str}], receives [{receive_str}] from you.
+
+Respond with ONE of:
+- TRADE_ACCEPT (accept this counter-offer)
+- TRADE_REJECT (decline and end negotiation)
+- TRADE_COUNTER:<props_you_give>:<props_you_receive>:<cash> (counter again, max {max_counters - counter_count} left)"""
+                
+                response = current_responder._send_message(prompt, board, players)
+                action, counter_offer = current_responder.action_parser.parse_negotiation_response(response)
+                
+                # Handle response
+                if action == 'accept':
+                    log.add(f"✓ {current_responder.name} accepted trade from {current_proposer.name}")
+                    return (True, current_proposal, current_proposer, current_responder)
+                
+                elif action == 'reject':
+                    log.add(f"✗ {current_responder.name} rejected trade from {current_proposer.name}")
+                    return (False, None, None, None)
+                
+                elif action == 'counter' and counter_offer:
+                    counter_count += 1
+                    if counter_count > max_counters:
+                        log.add(f"✗ Max counter-offers ({max_counters}) reached, negotiation failed")
+                        return (False, None, None, None)
+                    
+                    # Swap roles: responder becomes proposer with their counter-offer
+                    log.add(f"↔ {current_responder.name} made counter-offer #{counter_count}")
+                    current_proposal = counter_offer
+                    current_proposer, current_responder = current_responder, current_proposer
+                    # Continue loop with new proposal
+                
+                else:  # 'unclear' or invalid response
+                    log.add(f"✗ {current_responder.name} gave unclear response, treating as rejection")
+                    return (False, None, None, None)
             
-            # Send initial proposal to target
-            last_message = target._send_message(initial_prompt, board, players)
+            # Max counters reached
+            log.add(f"✗ Negotiation ended: max {max_counters} counter-offers reached")
+            return (False, None, None, None)
             
-            proposer_accepted = False
-            target_accepted = False
-            
-            # Negotiation loop (max 8 rounds)
-            for round_num in range(8):
-                # Check target's response
-                target_response = target.action_parser.parse_negotiation_response(last_message)
-                if target_response == 'accept':
-                    target_accepted = True
-                elif target_response == 'reject' or target_response == 'end':
-                    return (False, None)
-                
-                if proposer_accepted and target_accepted:
-                    return (True, proposal)
-                
-                # Proposer responds
-                proposer_prompt = f"{target.name} said: {last_message}\nYour response:"
-                proposer_message = proposer._send_message(proposer_prompt, board, players)
-                
-                # Check proposer's response
-                proposer_response = proposer.action_parser.parse_negotiation_response(proposer_message)
-                if proposer_response == 'accept':
-                    proposer_accepted = True
-                elif proposer_response == 'reject' or proposer_response == 'end':
-                    return (False, None)
-                
-                if proposer_accepted and target_accepted:
-                    return (True, proposal)
-                
-                # Target responds to proposer's message
-                target_prompt = f"{proposer.name} said: {proposer_message}\nYour response:"
-                last_message = target._send_message(target_prompt, board, players)
-            
-            # Max rounds reached
-            return (False, None)
-        except Exception:
-            return (False, None)
+        except Exception as e:
+            log.add(f"✗ Negotiation error: {e}")
+            return (False, None, None, None)
     
     def execute_llm_trade(self, proposer: 'LLMPlayer', target: 'LLMPlayer', proposal: dict,
                          board: Board, players: List[Player], log) -> bool:

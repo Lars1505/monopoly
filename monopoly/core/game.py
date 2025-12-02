@@ -83,11 +83,26 @@ def setup_players(board, dice):
     return players
 
 
-def setup_game(game_number, game_seed):
-    events_log = Log(LogSettings.EVENTS_LOG_PATH, disabled=not LogSettings.KEEP_GAME_LOG)
+def setup_game(game_number, game_seed, run_dir=None):
+    """Setup game with optional run directory for logs."""
+    from pathlib import Path
+    
+    if run_dir:
+        run_dir = Path(run_dir)
+        events_log_path = run_dir / "events.log"
+        bankruptcies_path = run_dir / "bankruptcies.tsv"
+        # Initialize files if they don't exist (for multiprocessing)
+        if not events_log_path.exists():
+            Log(events_log_path, disabled=not LogSettings.KEEP_GAME_LOG).reset("Events log")
+        if not bankruptcies_path.exists():
+            Log(bankruptcies_path).reset("game_number\tplayer_bankrupt\tturn")
+    else:
+        events_log_path = LogSettings.EVENTS_LOG_PATH
+        bankruptcies_path = LogSettings.BANKRUPTCIES_PATH
+    
+    events_log = Log(events_log_path, disabled=not LogSettings.KEEP_GAME_LOG)
     events_log.add(f"= GAME {game_number} of {SimulationSettings.n_games} (seed = {game_seed}) =")
-
-    bankruptcies_log = Log(LogSettings.BANKRUPTCIES_PATH)
+    bankruptcies_log = Log(bankruptcies_path)
 
     # Initialize the board (plots, chance, community chest etc.)
     board = Board(GameSettings)

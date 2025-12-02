@@ -30,7 +30,7 @@ class GameMechanics:
 @dataclass(frozen=True)
 class SimulationSettings:
     n_games: int = 1  # Number of games to simulate
-    n_moves: int = 50  # Max Number of moves per game (reduced for short games)
+    n_moves: int = 40  # Max Number of moves per game (reduced for short games)
     seed: int = 0  # Random seed to start simulation with
     multi_process: int = 4  # Number of parallel processes to use in the simulation
     

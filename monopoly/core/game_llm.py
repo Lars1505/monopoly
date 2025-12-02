@@ -8,15 +8,17 @@ from monopoly.log_settings import LogSettings
 from settings import SimulationSettings, GameSettings
 
 
-def setup_players_llm(board, dice):
-    """Setup players with LLM support. Creates individual chat instances for each LLM player.
-    
-    Returns:
-        tuple: (players list, dict mapping player_name to chat_instance)
-    """
+def setup_players_llm(board, dice, events_log=None):
+    """Setup players with LLM support."""
     from monopoly.core.player import Player
     from monopoly.core.game_utils import assign_property
     from monopoly.llm.llm_player import LLMPlayer
+    
+    def log_print(*args, **kwargs):
+        msg = ' '.join(str(arg) for arg in args)
+        if events_log and msg.strip():
+            events_log.add(f"[PRINT] {msg}")
+        print(*args, **kwargs)
     
     try:
         from llm_config import LLM_PLAYER_NAMES, LLM_PLAYER_CONFIG, LLM_PROVIDER, GEMINI_API_KEY, GEMINI_MODEL, LLAMA_MODEL
@@ -53,22 +55,23 @@ def setup_players_llm(board, dice):
                         model = LLAMA_MODEL
                         api_key = None
                 
-                # Create appropriate chat instance
+                logger = (lambda msg: events_log.add(msg)) if events_log else None
+                
                 if provider == "llama":
-                    chat = LlamaChat(model=model)
-                    print(f"✓ Llama chat created for {player_name} (model: {model})")
+                    chat = LlamaChat(model=model, logger=logger)
+                    log_print(f"✓ Llama chat created for {player_name} (model: {model})")
                 elif provider == "gemini":
                     if api_key:
-                        chat = GeminiChat(api_key=api_key, model=model)
-                        print(f"✓ Gemini chat created for {player_name} (model: {model})")
+                        chat = GeminiChat(api_key=api_key, model=model, logger=logger)
+                        log_print(f"✓ Gemini chat created for {player_name} (model: {model})")
                     else:
-                        print(f"⚠ GEMINI_API_KEY not set for {player_name}, using mock")
                         chat = MockChat()
+                        log_print(f"⚠ GEMINI_API_KEY not set for {player_name}, using mock")
                 else:
-                    print(f"⚠ Unknown provider '{provider}' for {player_name}, using mock")
                     chat = MockChat()
+                    log_print(f"⚠ Unknown provider '{provider}' for {player_name}, using mock")
             except Exception as e:
-                print(f"⚠ Chat setup failed for {player_name}: {e}, using mock")
+                log_print(f"⚠ Chat setup failed for {player_name}: {e}, using mock")
                 chat = MockChat()
             
             player_chats[player_name] = chat
@@ -101,49 +104,57 @@ def setup_players_llm(board, dice):
     return players, player_chats
 
 
-def monopoly_game_llm(game_number_and_seeds):
+def monopoly_game_llm(game_number_and_seeds_and_run_dir):
     """Game loop with LLM player support."""
-    game_number, game_seed = game_number_and_seeds
-    board, dice, events_log, bankruptcies_log = setup_game(game_number, game_seed)
+    game_number, game_seed, run_dir = game_number_and_seeds_and_run_dir
+    board, dice, events_log, bankruptcies_log = setup_game(game_number, game_seed, run_dir)
+    
+    def log_print(*args, **kwargs):
+        msg = ' '.join(str(arg) for arg in args)
+        if msg.strip():
+            events_log.add(f"[PRINT] {msg}")
+        print(*args, **kwargs)
     
     # Setup players and create individual chat instances for each LLM player
-    players, player_chats = setup_players_llm(board, dice)
-    LLM1_chat = player_chats.get("LLM1", None)
-    LLM2_chat = player_chats.get("LLM2", None)
-    r1 = LLM1_chat.send_message("You are playing Monopoly, you want to negotiate with the other players now") # assume engine output
-    print(r1)
-    if r1.startswith("NEGOTIATE"):
-        r2 = LLM2_chat.send_message(r1 + "It's your turn to respond to the trade proposal in Monopoly, you can accept, reject or counter the offer, you can only counter once.") # assume engine output
-        print(r2)
-        r1 = LLM1_chat.send_message(r2 + "You can only accept or reject this deal for this turn") # assume engine output
-        print(r1)
-    else: 
-        r2 = LLM2_chat.send_message("<engine output>: You are playing Monopoly, you are at Park Place, with cash $800.") # assume engine output
-        print(r2)    
-    # Initialize chat history files for real-time updates
-    history_dir = Path("gameHistory")
-    history_dir.mkdir(exist_ok=True)
-    history_files = {name: history_dir / f"game_{game_number}_{name}_chat_history.txt" 
-                     for name in player_chats.keys()}
+    players, player_chats = setup_players_llm(board, dice, events_log)
+    
+    # COMMENTED OUT: Hardcoded test/debug code that forces initial negotiation before game starts.
+    # This causes performance issues by triggering unnecessary API calls before gameplay begins.
+    # The LLMs will negotiate naturally during the game via propose_trade_to_llm() in llm_player.py.
+    # LLM1_chat = player_chats.get("LLM1", None)
+    # LLM2_chat = player_chats.get("LLM2", None)
+    # r1 = LLM1_chat.send_message("You are playing Monopoly, you want to negotiate with the other players now") # assume engine output
+    # log_print(r1)
+    # if r1.startswith("NEGOTIATE"):
+    #     r2 = LLM2_chat.send_message(r1 + "It's your turn to respond to the trade proposal in Monopoly, you can accept, reject or counter the offer, you can only counter once.") # assume engine output
+    #     log_print(r2)
+    #     r1 = LLM1_chat.send_message(r2 + "You can only accept or reject this deal for this turn") # assume engine output
+    #     log_print(r1)
+    # else: 
+    #     r2 = LLM2_chat.send_message("<engine output>: You are playing Monopoly, you are at Park Place, with cash $800.") # assume engine output
+    #     log_print(r2)    
+    
+    # Initialize chat history files
+    history_dir = Path(run_dir) if run_dir else Path("gameHistory")
+    history_dir.mkdir(parents=True, exist_ok=True)
+    history_files = {name: history_dir / f"game_{game_number}_{name}_chat_history.txt" for name in player_chats.keys()}
     for name, file in history_files.items():
-        with open(file, 'w') as f:
-            f.write(f"=== Game {game_number} Chat History for {name} ===\n\n")
+        file.write_text(f"=== Game {game_number} Chat History for {name} ===\n\n")
     
     def _update_chat_history(player_name, chat):
-        """Update chat history file in real-time."""
         if player_name not in history_files:
             return
         try:
-            with open(history_files[player_name], 'w') as f:
-                f.write(f"=== Game {game_number} Chat History for {player_name} ===\n\n")
-                for message in chat.get_history():
-                    role = getattr(message, 'role', 'unknown')
-                    parts = getattr(message, 'parts', [])
-                    text = parts[0].text if parts and hasattr(parts[0], 'text') else str(parts[0]) if parts else ""
-                    f.write(f"{role.upper()}: {text}\n\n")
-                f.flush()
+            lines = [f"=== Game {game_number} Chat History for {player_name} ===\n\n"]
+            for msg in chat.get_history():
+                role = getattr(msg, 'role', 'unknown')
+                parts = getattr(msg, 'parts', [])
+                text = parts[0].text if parts and hasattr(parts[0], 'text') else str(parts[0]) if parts else ""
+                lines.append(f"{role.upper()}: {text}\n")
+                lines.append("============\n\n")
+            history_files[player_name].write_text(''.join(lines))
         except Exception:
-            pass  # Silently fail to avoid disrupting game
+            pass
     
     # Game loop
     for turn_n in range(1, SimulationSettings.n_moves + 1):
@@ -172,7 +183,7 @@ def monopoly_game_llm(game_number_and_seeds):
     for player_name, chat in player_chats.items():
         if chat and player_name in history_files:
             _update_chat_history(player_name, chat)
-            print(f"✓ Chat history saved to {history_files[player_name]}")
+            log_print(f"✓ Chat history saved to {history_files[player_name]}")
     
     board.log_current_map(events_log)
     events_log.save()

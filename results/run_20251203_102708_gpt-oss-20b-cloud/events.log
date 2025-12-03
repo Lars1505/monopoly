@@ -1,0 +1,1344 @@
+Events log
+= GAME 1 of 1 (seed = 3626764237) =
+[PRINT] ✓ Llama chat created for LLM1 (model: gpt-oss:20b-cloud)
+[PRINT] ✓ Llama chat created for LLM2 (model: gpt-oss:20b-cloud)
+
+== GAME 1 Turn 1 ===
+- LLM1: $1000 (net $1000), at position 0 (GO)
+- LLM2: $1000 (net $1000), at position 0 (GO)
+- Bob: $1000 (net $1000), at position 0 (GO)
+- Charly: $1000 (net $1000), at position 0 (GO)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1000, at GO) goes: ===
+roll: 2, ([1, 1],double)
+LLM1 goes to: COM1 Community Chest
+LLM1 drew Community Chest card: 'You inherit $100'
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1000, at COM1 Community Chest) goes: ===
+roll: 5, ([1, 4])
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Advance token to nearest Utility. If owned, throw dice and pay owner a total ten times amount thrown.'
+LLM1 goes to U1 Electric Company
+LLM1 (LLM) bought U1 Electric Company for $150
+=== LLM2 ($1000, at GO) goes: ===
+roll: 11, ([5, 6])
+LLM2 goes to: C1 St. Charles Place
+LLM2 (LLM) bought C1 St. Charles Place for $140
+=== Bob ($1000, at GO) goes: ===
+roll: 6, ([2, 4])
+Bob goes to: B1 Oriental Avenue
+Bob bought B1 Oriental Avenue for $100
+=== Charly ($1000, at GO) goes: ===
+roll: 6, ([3, 3],double)
+Charly goes to: B1 Oriental Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $6
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($994, at B1 Oriental Avenue) goes: ===
+roll: 5, ([4, 1])
+Charly goes to: C1 St. Charles Place
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $10
+
+== GAME 1 Turn 2 ===
+- LLM1: $850 (net $1000), at position 12 (U1 Electric Company)
+- LLM2: $870 (net $1010), at position 11 (C1 St. Charles Place)
+- Bob: $906 (net $1006), at position 6 (B1 Oriental Avenue)
+- Charly: $984 (net $984), at position 11 (C1 St. Charles Place)
+Available houses/hotels: 36/12
+
+=== LLM1 ($850, at U1 Electric Company) goes: ===
+roll: 8, ([2, 6])
+LLM1 goes to: FP Free Parking
+=== LLM2 ($870, at C1 St. Charles Place) goes: ===
+roll: 9, ([4, 5])
+LLM2 goes to: FP Free Parking
+=== Bob ($906, at B1 Oriental Avenue) goes: ===
+roll: 6, ([2, 4])
+Bob goes to: U1 Electric Company
+Bob landed on a property, owned by LLM1
+roll: 3, ([2, 1])
+Bob pays LLM1 rent $12
+=== Charly ($984, at C1 St. Charles Place) goes: ===
+roll: 6, ([2, 4])
+Charly goes to: COM2 Community Chest
+Charly drew Community Chest card: 'It is your birthday. Collect $10 from every player'
+LLM1 pays Charly $10
+LLM2 pays Charly $10
+Bob pays Charly $10
+
+== GAME 1 Turn 3 ===
+- LLM1: $812 (net $962), at position 20 (FP Free Parking)
+- LLM2: $820 (net $960), at position 20 (FP Free Parking)
+- Bob: $844 (net $944), at position 12 (U1 Electric Company)
+- Charly: $1134 (net $1134), at position 17 (COM2 Community Chest)
+Available houses/hotels: 36/12
+
+=== LLM1 ($812, at FP Free Parking) goes: ===
+roll: 8, ([5, 3])
+LLM1 goes to: U2 Waterworks
+LLM1 (LLM) bought U2 Waterworks for $150
+=== LLM2 ($820, at FP Free Parking) goes: ===
+roll: 10, ([6, 4])
+LLM2 goes to: GTJ Go To Jail
+LLM2 landed on Go To Jail, and goes to Jail.
+=== Bob ($844, at U1 Electric Company) goes: ===
+roll: 8, ([6, 2])
+Bob goes to: FP Free Parking
+=== Charly ($1134, at COM2 Community Chest) goes: ===
+roll: 9, ([4, 5])
+Charly goes to: F1 Atlantic Avenue
+Charly bought F1 Atlantic Avenue for $260
+
+== GAME 1 Turn 4 ===
+- LLM1: $662 (net $962), at position 28 (U2 Waterworks)
+- LLM2: $820 (net $960), at position 10 (JL Jail)
+- Bob: $844 (net $944), at position 20 (FP Free Parking)
+- Charly: $874 (net $1134), at position 26 (F1 Atlantic Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($662, at U2 Waterworks) goes: ===
+roll: 7, ([5, 2])
+LLM1 goes to: R4 Short Line
+LLM1 (LLM) bought R4 Short Line for $200
+=== LLM2 ($820, at JL Jail) goes: ===
+roll: 8, ([4, 4],double)
+LLM2 rolled a double, a leaves jail for free
+LLM2 goes to: D2 Tennessee Avenue
+LLM2 (LLM) bought D2 Tennessee Avenue for $180
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($640, at D2 Tennessee Avenue) goes: ===
+roll: 9, ([3, 6])
+LLM2 goes to: F2 Ventnor Avenue
+LLM2 (LLM) bought F2 Ventnor Avenue for $260
+=== Bob ($844, at FP Free Parking) goes: ===
+roll: 11, ([6, 5])
+Bob goes to: G1 Pacific Avenue
+Bob bought G1 Pacific Avenue for $300
+=== Charly ($874, at F1 Atlantic Avenue) goes: ===
+roll: 7, ([4, 3])
+Charly goes to: COM3 Community Chest
+Charly drew Community Chest card: 'Get Out of Jail Free'
+Charly now has a 'Get Out of Jail Free' card
+
+== GAME 1 Turn 5 ===
+- LLM1: $462 (net $962), at position 35 (R4 Short Line)
+- LLM2: $380 (net $960), at position 27 (F2 Ventnor Avenue)
+- Bob: $544 (net $944), at position 31 (G1 Pacific Avenue)
+- Charly: $874 (net $1134), at position 33 (COM3 Community Chest)
+Available houses/hotels: 36/12
+
+=== LLM1 ($462, at R4 Short Line) goes: ===
+roll: 3, ([2, 1])
+LLM1 goes to: LT Luxury Tax
+LLM1 pays Luxury Tax $100
+=== LLM2 ($380, at F2 Ventnor Avenue) goes: ===
+roll: 10, ([4, 6])
+LLM2 goes to: H1 Park Place
+LLM2 (LLM) bought H1 Park Place for $350
+=== Bob ($544, at G1 Pacific Avenue) goes: ===
+roll: 5, ([4, 1])
+Bob goes to: CH3 Chance
+Bob drew Chance card: 'Advance to Boardwalk'
+Bob goes to H2 Boardwalk
+Bob landed on a H2 Boardwalk, he refuses to buy it
+=== Charly ($874, at COM3 Community Chest) goes: ===
+roll: 4, ([2, 2],double)
+Charly goes to: H1 Park Place
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $35
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($839, at H1 Park Place) goes: ===
+roll: 10, ([6, 4])
+ Charly receives salary $200
+Charly goes to: CH1 Chance
+Charly drew Chance card: 'Speeding fine $15'
+
+== GAME 1 Turn 6 ===
+- LLM1: $362 (net $862), at position 38 (LT Luxury Tax)
+- LLM2: $65 (net $995), at position 37 (H1 Park Place)
+- Bob: $544 (net $944), at position 39 (H2 Boardwalk)
+- Charly: $1024 (net $1284), at position 7 (CH1 Chance)
+Available houses/hotels: 36/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✗ LLM2 rejected trade from LLM1
+=== LLM1 ($362, at LT Luxury Tax) goes: ===
+roll: 9, ([3, 6])
+ LLM1 receives salary $200
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Advance to Go (Collect $200)'
+LLM1 goes to GO
+ LLM1 receives salary $200
+LLM2 batched strategy: trade=False, improvements=0
+=== LLM2 ($65, at H1 Park Place) goes: ===
+roll: 7, ([3, 4])
+ LLM2 receives salary $200
+LLM2 goes to: IT Income Tax
+LLM2 pays 10% Income tax 119
+=== Bob ($544, at H2 Boardwalk) goes: ===
+roll: 7, ([3, 4])
+ Bob receives salary $200
+Bob goes to: B1 Oriental Avenue
+Own property, no rent
+=== Charly ($1024, at CH1 Chance) goes: ===
+roll: 11, ([6, 5])
+Charly goes to: D2 Tennessee Avenue
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $14
+
+== GAME 1 Turn 7 ===
+- LLM1: $762 (net $1262), at position 0 (GO)
+- LLM2: $160 (net $1090), at position 4 (IT Income Tax)
+- Bob: $744 (net $1144), at position 6 (B1 Oriental Avenue)
+- Charly: $1010 (net $1270), at position 18 (D2 Tennessee Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($762, at GO) goes: ===
+roll: 11, ([5, 6])
+LLM1 goes to: C1 St. Charles Place
+LLM1 landed on a property, owned by LLM2
+LLM1 pays LLM2 rent $10
+=== LLM2 ($170, at IT Income Tax) goes: ===
+roll: 7, ([2, 5])
+LLM2 goes to: C1 St. Charles Place
+Own property, no rent
+=== Bob ($744, at B1 Oriental Avenue) goes: ===
+roll: 3, ([2, 1])
+Bob goes to: B3 Connecticut Avenue
+Bob bought B3 Connecticut Avenue for $120
+=== Charly ($1010, at D2 Tennessee Avenue) goes: ===
+roll: 9, ([5, 4])
+Charly goes to: F2 Ventnor Avenue
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $22
+
+== GAME 1 Turn 8 ===
+- LLM1: $752 (net $1252), at position 11 (C1 St. Charles Place)
+- LLM2: $192 (net $1122), at position 11 (C1 St. Charles Place)
+- Bob: $624 (net $1144), at position 9 (B3 Connecticut Avenue)
+- Charly: $988 (net $1248), at position 27 (F2 Ventnor Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($752, at C1 St. Charles Place) goes: ===
+roll: 6, ([1, 5])
+LLM1 goes to: COM2 Community Chest
+LLM1 drew Community Chest card: 'Pay school fees of $50'
+=== LLM2 ($192, at C1 St. Charles Place) goes: ===
+roll: 2, ([1, 1],double)
+LLM2 goes to: C2 States Avenue
+LLM2 (LLM) bought C2 States Avenue for $140
+LLM2 rolled a double (1 in a row) so they go again.
+LLM2 batched strategy: trade=True, improvements=0
+✓ LLM1 accepted trade from LLM2
+Trade failed: LLM2 doesn't have $100
+=== LLM2 ($52, at C2 States Avenue) goes: ===
+roll: 6, ([1, 5])
+LLM2 goes to: D3 New York Avenue
+LLM2 (LLM) passed on D3 New York Avenue
+=== Bob ($624, at B3 Connecticut Avenue) goes: ===
+roll: 9, ([6, 3])
+Bob goes to: D2 Tennessee Avenue
+Bob landed on a property, owned by LLM2
+Bob pays LLM2 rent $14
+=== Charly ($988, at F2 Ventnor Avenue) goes: ===
+roll: 5, ([2, 3])
+Charly goes to: G2 North Carolina Avenue
+Charly bought G2 North Carolina Avenue for $300
+
+== GAME 1 Turn 9 ===
+- LLM1: $702 (net $1202), at position 17 (COM2 Community Chest)
+- LLM2: $66 (net $1136), at position 19 (D3 New York Avenue)
+- Bob: $610 (net $1130), at position 18 (D2 Tennessee Avenue)
+- Charly: $688 (net $1248), at position 32 (G2 North Carolina Avenue)
+Available houses/hotels: 36/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✗ LLM2 rejected trade from LLM1
+=== LLM1 ($702, at COM2 Community Chest) goes: ===
+roll: 6, ([1, 5])
+LLM1 goes to: E2 Indiana Avenue
+LLM1 (LLM) bought E2 Indiana Avenue for $220
+=== LLM2 ($66, at D3 New York Avenue) goes: ===
+roll: 9, ([5, 4])
+LLM2 goes to: U2 Waterworks
+LLM2 landed on a property, owned by LLM1
+roll: 7, ([5, 2])
+LLM2 has $66, he can pay $70, but needs to mortgage/sell some things for that
+LLM2 mortgages C2 States Avenue, raising $70
+LLM2 pays LLM1 rent $70
+=== Bob ($610, at D2 Tennessee Avenue) goes: ===
+roll: 6, ([4, 2])
+Bob goes to: E3 Illinois Avenue
+Bob bought E3 Illinois Avenue for $240
+=== Charly ($688, at G2 North Carolina Avenue) goes: ===
+roll: 3, ([1, 2])
+Charly goes to: R4 Short Line
+Charly landed on a property, owned by LLM1
+Charly pays LLM1 rent $25
+
+== GAME 1 Turn 10 ===
+- LLM1: $577 (net $1297), at position 23 (E2 Indiana Avenue)
+- LLM2: $66 (net $1066), at position 28 (U2 Waterworks)
+- Bob: $370 (net $1130), at position 24 (E3 Illinois Avenue)
+- Charly: $663 (net $1223), at position 35 (R4 Short Line)
+Available houses/hotels: 36/12
+
+=== LLM1 ($577, at E2 Indiana Avenue) goes: ===
+roll: 7, ([3, 4])
+LLM1 goes to: GTJ Go To Jail
+LLM1 landed on Go To Jail, and goes to Jail.
+=== LLM2 ($66, at U2 Waterworks) goes: ===
+roll: 7, ([6, 1])
+LLM2 goes to: R4 Short Line
+LLM2 landed on a property, owned by LLM1
+LLM2 pays LLM1 rent $25
+=== Bob ($370, at E3 Illinois Avenue) goes: ===
+roll: 11, ([6, 5])
+Bob goes to: R4 Short Line
+Bob landed on a property, owned by LLM1
+Bob pays LLM1 rent $25
+=== Charly ($663, at R4 Short Line) goes: ===
+roll: 6, ([1, 5])
+ Charly receives salary $200
+Charly goes to: A1 Mediterranean Avenue
+Charly bought A1 Mediterranean Avenue for $60
+
+== GAME 1 Turn 11 ===
+- LLM1: $627 (net $1347), at position 10 (JL Jail)
+- LLM2: $41 (net $1041), at position 35 (R4 Short Line)
+- Bob: $345 (net $1105), at position 35 (R4 Short Line)
+- Charly: $803 (net $1423), at position 1 (A1 Mediterranean Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($627, at JL Jail) goes: ===
+roll: 9, ([3, 6])
+LLM1 stays in jail
+LLM2 batched strategy: trade=True, improvements=0
+✓ LLM1 accepted trade from LLM2
+LLM Trade executed: LLM2 gave ['C2 States Avenue'] and $0, received [] and $0 from LLM1
+✓ Trade completed: LLM2 ↔ LLM1
+=== LLM2 ($41, at R4 Short Line) goes: ===
+roll: 7, ([5, 2])
+ LLM2 receives salary $200
+LLM2 goes to: COM1 Community Chest
+LLM2 drew Community Chest card: 'Life insurance matures. Collect $100'
+LLM2 gets $100
+=== Bob ($345, at R4 Short Line) goes: ===
+roll: 7, ([1, 6])
+ Bob receives salary $200
+Bob goes to: COM1 Community Chest
+Bob drew Community Chest card: 'Pay hospital fees of $100'
+=== Charly ($803, at A1 Mediterranean Avenue) goes: ===
+roll: 8, ([6, 2])
+Charly goes to: B3 Connecticut Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $8
+
+== GAME 1 Turn 12 ===
+- LLM1: $627 (net $1417), at position 10 (JL Jail)
+- LLM2: $341 (net $1271), at position 2 (COM1 Community Chest)
+- Bob: $453 (net $1213), at position 2 (COM1 Community Chest)
+- Charly: $795 (net $1415), at position 9 (B3 Connecticut Avenue)
+Available houses/hotels: 36/12
+
+LLM1 batched strategy: trade=False, improvements=0
+=== LLM1 ($627, at JL Jail) goes: ===
+LLM1 unmortgages C2 States Avenue for $84.0
+roll: 7, ([6, 1])
+LLM1 stays in jail
+=== LLM2 ($341, at COM1 Community Chest) goes: ===
+roll: 8, ([6, 2])
+LLM2 goes to: JL Jail
+=== Bob ($453, at COM1 Community Chest) goes: ===
+roll: 6, ([4, 2])
+Bob goes to: B2 Vermont Avenue
+Bob bought B2 Vermont Avenue for $100
+=== Charly ($795, at B3 Connecticut Avenue) goes: ===
+roll: 5, ([2, 3])
+Charly goes to: C3 Virginia Avenue
+Charly bought C3 Virginia Avenue for $160
+
+== GAME 1 Turn 13 ===
+- LLM1: $543 (net $1403), at position 10 (JL Jail)
+- LLM2: $341 (net $1271), at position 10 (JL Jail)
+- Bob: $353 (net $1213), at position 8 (B2 Vermont Avenue)
+- Charly: $635 (net $1415), at position 14 (C3 Virginia Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($543.0, at JL Jail) goes: ===
+roll: 9, ([3, 6])
+LLM1 did not rolled a double for the third time, pays 50 and leaves jail
+LLM1 goes to: D3 New York Avenue
+LLM1 (LLM) bought D3 New York Avenue for $200
+=== LLM2 ($341, at JL Jail) goes: ===
+roll: 7, ([5, 2])
+LLM2 goes to: COM2 Community Chest
+LLM2 drew Community Chest card: 'Doctor's fee. Pay $50'
+=== Bob ($353, at B2 Vermont Avenue) goes: ===
+Bob built 1st house on B1 Oriental Avenue for $50
+Bob built 1st house on B3 Connecticut Avenue for $50
+Bob built 1st house on B2 Vermont Avenue for $50
+roll: 9, ([5, 4])
+Bob goes to: COM2 Community Chest
+Bob drew Community Chest card: 'From sale of stock you get $50'
+Bob gets $50
+=== Charly ($635, at C3 Virginia Avenue) goes: ===
+roll: 4, ([2, 2],double)
+Charly goes to: D2 Tennessee Avenue
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $14
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($621, at D2 Tennessee Avenue) goes: ===
+roll: 7, ([6, 1])
+Charly goes to: R3 B&O Railroad
+Charly bought R3 B&O Railroad for $200
+
+== GAME 1 Turn 14 ===
+- LLM1: $293 (net $1353), at position 19 (D3 New York Avenue)
+- LLM2: $305 (net $1235), at position 17 (COM2 Community Chest)
+- Bob: $253 (net $1263), at position 17 (COM2 Community Chest)
+- Charly: $421 (net $1401), at position 25 (R3 B&O Railroad)
+Available houses/hotels: 33/12
+
+=== LLM1 ($293.0, at D3 New York Avenue) goes: ===
+roll: 7, ([4, 3])
+LLM1 goes to: F1 Atlantic Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $22
+LLM2 batched strategy: trade=True, improvements=0
+↔ LLM1 made counter-offer #1
+✓ LLM2 accepted trade from LLM1
+LLM Trade executed: LLM1 gave ['C2 States Avenue'] and $50, received ['C1 St. Charles Place'] and $0 from LLM2
+✓ Trade completed: LLM1 ↔ LLM2
+=== LLM2 ($355, at COM2 Community Chest) goes: ===
+roll: 9, ([6, 3])
+LLM2 goes to: F1 Atlantic Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $22
+=== Bob ($253, at COM2 Community Chest) goes: ===
+Bob built 2nd house on B1 Oriental Avenue for $50
+roll: 11, ([6, 5])
+Bob goes to: U2 Waterworks
+Bob landed on a property, owned by LLM1
+roll: 5, ([2, 3])
+Bob pays LLM1 rent $50
+=== Charly ($465, at R3 B&O Railroad) goes: ===
+roll: 4, ([3, 1])
+Charly goes to: F3 Marvin Gardens
+Charly landed on a F3 Marvin Gardens, he refuses to buy it
+
+== GAME 1 Turn 15 ===
+- LLM1: $271 (net $1331), at position 26 (F1 Atlantic Avenue)
+- LLM2: $333 (net $1263), at position 26 (F1 Atlantic Avenue)
+- Bob: $153 (net $1213), at position 28 (U2 Waterworks)
+- Charly: $465 (net $1445), at position 29 (F3 Marvin Gardens)
+Available houses/hotels: 32/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✓ LLM2 accepted trade from LLM1
+LLM Trade executed: LLM1 gave ['R4 Short Line'] and $0, received ['D2 Tennessee Avenue'] and $0 from LLM2
+✓ Trade completed: LLM1 ↔ LLM2
+=== LLM1 ($271.0, at F1 Atlantic Avenue) goes: ===
+roll: 12, ([6, 6],double)
+LLM1 goes to: LT Luxury Tax
+LLM1 pays Luxury Tax $100
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($171.0, at LT Luxury Tax) goes: ===
+roll: 6, ([3, 3],double)
+ LLM1 receives salary $200
+LLM1 goes to: IT Income Tax
+LLM1 pays 10% Income tax 141
+LLM1 rolled a double (2 in a row) so they go again.
+=== LLM1 ($230.0, at IT Income Tax) goes: ===
+roll: 12, ([6, 6],double)
+LLM1 rolled 3 doubles in a row, and goes to Jail.
+=== LLM2 ($333, at F1 Atlantic Avenue) goes: ===
+roll: 10, ([6, 4])
+LLM2 goes to: CH3 Chance
+LLM2 drew Chance card: 'Advance to St. Charles Place. If you pass Go, collect $200'
+LLM2 goes to C1 St. Charles Place
+ LLM2 receives salary $200
+LLM2 landed on a property, owned by LLM1
+LLM2 pays LLM1 rent $10
+=== Bob ($153, at U2 Waterworks) goes: ===
+roll: 9, ([3, 6])
+Bob goes to: H1 Park Place
+Bob landed on a property, owned by LLM2
+Bob pays LLM2 rent $35
+=== Charly ($465, at F3 Marvin Gardens) goes: ===
+roll: 4, ([3, 1])
+Charly goes to: COM3 Community Chest
+Charly drew Community Chest card: 'Advance to Go (Collect $200)'
+Charly goes to GO
+ Charly receives salary $200
+
+== GAME 1 Turn 16 ===
+- LLM1: $240 (net $1280), at position 10 (JL Jail)
+- LLM2: $558 (net $1508), at position 11 (C1 St. Charles Place)
+- Bob: $118 (net $1178), at position 37 (H1 Park Place)
+- Charly: $665 (net $1645), at position 0 (GO)
+Available houses/hotels: 32/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✗ LLM2 rejected trade from LLM1
+=== LLM1 ($240.0, at JL Jail) goes: ===
+roll: 7, ([2, 5])
+LLM1 stays in jail
+=== LLM2 ($558, at C1 St. Charles Place) goes: ===
+roll: 6, ([5, 1])
+LLM2 goes to: COM2 Community Chest
+LLM2 drew Community Chest card: 'Bank error in your favor. Collect $200'
+LLM2 gets $200
+=== Bob ($118, at H1 Park Place) goes: ===
+roll: 7, ([2, 5])
+ Bob receives salary $200
+Bob goes to: IT Income Tax
+Bob pays 10% Income tax 137
+=== Charly ($665, at GO) goes: ===
+roll: 10, ([4, 6])
+Charly goes to: JL Jail
+
+== GAME 1 Turn 17 ===
+- LLM1: $240 (net $1280), at position 10 (JL Jail)
+- LLM2: $758 (net $1708), at position 17 (COM2 Community Chest)
+- Bob: $181 (net $1241), at position 4 (IT Income Tax)
+- Charly: $665 (net $1645), at position 10 (JL Jail)
+Available houses/hotels: 32/12
+
+=== LLM1 ($240.0, at JL Jail) goes: ===
+roll: 7, ([3, 4])
+LLM1 stays in jail
+LLM2 batched strategy: trade=True, improvements=0
+✗ LLM1 rejected trade from LLM2
+=== LLM2 ($758, at COM2 Community Chest) goes: ===
+roll: 7, ([5, 2])
+LLM2 goes to: E3 Illinois Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $20
+=== Bob ($201, at IT Income Tax) goes: ===
+roll: 3, ([2, 1])
+Bob goes to: CH1 Chance
+Bob drew Chance card: 'Go Back 3 Spaces'
+Bob goes to IT Income Tax
+Bob pays 10% Income tax 126
+=== Charly ($665, at JL Jail) goes: ===
+roll: 9, ([3, 6])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by LLM1
+Charly pays LLM1 rent $16
+
+== GAME 1 Turn 18 ===
+- LLM1: $256 (net $1296), at position 10 (JL Jail)
+- LLM2: $738 (net $1688), at position 24 (E3 Illinois Avenue)
+- Bob: $75 (net $1135), at position 4 (IT Income Tax)
+- Charly: $649 (net $1629), at position 19 (D3 New York Avenue)
+Available houses/hotels: 32/12
+
+=== LLM1 ($256.0, at JL Jail) goes: ===
+roll: 8, ([6, 2])
+LLM1 did not rolled a double for the third time, pays 50 and leaves jail
+LLM1 goes to: D2 Tennessee Avenue
+Own property, no rent
+=== LLM2 ($738, at E3 Illinois Avenue) goes: ===
+roll: 2, ([1, 1],double)
+LLM2 goes to: F1 Atlantic Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $22
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($716, at F1 Atlantic Avenue) goes: ===
+roll: 6, ([2, 4])
+LLM2 goes to: G2 North Carolina Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $26
+=== Bob ($75, at IT Income Tax) goes: ===
+roll: 7, ([5, 2])
+Bob goes to: C1 St. Charles Place
+Bob landed on a property, owned by LLM1
+Bob pays LLM1 rent $10
+=== Charly ($697, at D3 New York Avenue) goes: ===
+roll: 6, ([3, 3],double)
+Charly goes to: R3 B&O Railroad
+Own property, no rent
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($697, at R3 B&O Railroad) goes: ===
+roll: 7, ([5, 2])
+Charly goes to: G2 North Carolina Avenue
+Own property, no rent
+
+== GAME 1 Turn 19 ===
+- LLM1: $216 (net $1256), at position 18 (D2 Tennessee Avenue)
+- LLM2: $690 (net $1640), at position 32 (G2 North Carolina Avenue)
+- Bob: $65 (net $1125), at position 11 (C1 St. Charles Place)
+- Charly: $697 (net $1677), at position 32 (G2 North Carolina Avenue)
+Available houses/hotels: 32/12
+
+LLM1 batched strategy: trade=False, improvements=0
+=== LLM1 ($216.0, at D2 Tennessee Avenue) goes: ===
+roll: 5, ([4, 1])
+LLM1 goes to: E2 Indiana Avenue
+Own property, no rent
+LLM2 batched strategy: trade=True, improvements=0
+↔ LLM1 made counter-offer #1
+✓ LLM2 accepted trade from LLM1
+LLM Trade executed: LLM1 gave ['U1 Electric Company'] and $200, received ['R4 Short Line'] and $0 from LLM2
+✓ Trade completed: LLM1 ↔ LLM2
+=== LLM2 ($890, at G2 North Carolina Avenue) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: R4 Short Line
+LLM2 landed on a property, owned by LLM1
+LLM2 pays LLM1 rent $25
+=== Bob ($65, at C1 St. Charles Place) goes: ===
+roll: 5, ([2, 3])
+Bob goes to: D1 St. James Place
+Bob landed on a D1 St. James Place, he refuses to buy it
+=== Charly ($697, at G2 North Carolina Avenue) goes: ===
+roll: 8, ([4, 4],double)
+ Charly receives salary $200
+Charly goes to: GO
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($897, at GO) goes: ===
+roll: 10, ([5, 5],double)
+Charly goes to: JL Jail
+Charly rolled a double (2 in a row) so they go again.
+=== Charly ($897, at JL Jail) goes: ===
+roll: 5, ([2, 3])
+Charly goes to: R2 Pennsylvania Railroad
+Charly bought R2 Pennsylvania Railroad for $200
+
+== GAME 1 Turn 20 ===
+- LLM1: $41 (net $1131), at position 23 (E2 Indiana Avenue)
+- LLM2: $865 (net $1765), at position 35 (R4 Short Line)
+- Bob: $65 (net $1125), at position 16 (D1 St. James Place)
+- Charly: $697 (net $1877), at position 15 (R2 Pennsylvania Railroad)
+Available houses/hotels: 32/12
+
+=== LLM1 ($41.0, at E2 Indiana Avenue) goes: ===
+roll: 9, ([3, 6])
+LLM1 goes to: G2 North Carolina Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $26
+=== LLM2 ($865, at R4 Short Line) goes: ===
+roll: 4, ([1, 3])
+LLM2 goes to: H2 Boardwalk
+LLM2 (LLM) passed on H2 Boardwalk
+=== Bob ($65, at D1 St. James Place) goes: ===
+roll: 7, ([4, 3])
+Bob goes to: E2 Indiana Avenue
+Bob landed on a property, owned by LLM1
+Bob pays LLM1 rent $18
+=== Charly ($723, at R2 Pennsylvania Railroad) goes: ===
+roll: 6, ([3, 3],double)
+Charly goes to: E1 Kentucky Avenue
+Charly bought E1 Kentucky Avenue for $220
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($503, at E1 Kentucky Avenue) goes: ===
+roll: 4, ([1, 3])
+Charly goes to: R3 B&O Railroad
+Own property, no rent
+
+== GAME 1 Turn 21 ===
+- LLM1: $33 (net $1123), at position 32 (G2 North Carolina Avenue)
+- LLM2: $865 (net $1765), at position 39 (H2 Boardwalk)
+- Bob: $47 (net $1107), at position 23 (E2 Indiana Avenue)
+- Charly: $503 (net $1903), at position 25 (R3 B&O Railroad)
+Available houses/hotels: 32/12
+
+=== LLM1 ($33.0, at G2 North Carolina Avenue) goes: ===
+roll: 6, ([5, 1])
+LLM1 goes to: LT Luxury Tax
+LLM1 has $33.0, he can pay $100, but needs to mortgage/sell some things for that
+LLM1 mortgages C1 St. Charles Place, raising $70
+LLM1 pays Luxury Tax $100
+=== LLM2 ($865, at H2 Boardwalk) goes: ===
+roll: 6, ([1, 5])
+ LLM2 receives salary $200
+LLM2 goes to: R1 Reading Railroad
+LLM2 (LLM) bought R1 Reading Railroad for $200
+=== Bob ($47, at E2 Indiana Avenue) goes: ===
+roll: 7, ([3, 4])
+Bob goes to: GTJ Go To Jail
+Bob landed on Go To Jail, and goes to Jail.
+=== Charly ($503, at R3 B&O Railroad) goes: ===
+roll: 9, ([3, 6])
+Charly goes to: G3 Pennsylvania Avenue
+Charly landed on a G3 Pennsylvania Avenue, he refuses to buy it
+
+== GAME 1 Turn 22 ===
+- LLM1: $3 (net $1023), at position 38 (LT Luxury Tax)
+- LLM2: $865 (net $1965), at position 5 (R1 Reading Railroad)
+- Bob: $47 (net $1107), at position 10 (JL Jail)
+- Charly: $503 (net $1903), at position 34 (G3 Pennsylvania Avenue)
+Available houses/hotels: 32/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✗ LLM2 rejected trade from LLM1
+=== LLM1 ($3.0, at LT Luxury Tax) goes: ===
+roll: 5, ([3, 2])
+ LLM1 receives salary $200
+LLM1 goes to: A2 Baltic Avenue
+LLM1 (LLM) bought A2 Baltic Avenue for $60
+LLM2 batched strategy: trade=True, improvements=0
+✓ LLM1 accepted trade from LLM2
+LLM Trade executed: LLM2 gave ['C2 States Avenue'] and $50, received ['U2 Waterworks'] and $0 from LLM1
+✓ Trade completed: LLM2 ↔ LLM1
+=== LLM2 ($815, at R1 Reading Railroad) goes: ===
+roll: 9, ([6, 3])
+LLM2 goes to: C3 Virginia Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $12
+=== Bob ($47, at JL Jail) goes: ===
+roll: 8, ([6, 2])
+Bob stays in jail
+=== Charly ($515, at G3 Pennsylvania Avenue) goes: ===
+roll: 3, ([1, 2])
+Charly goes to: H1 Park Place
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $35
+
+== GAME 1 Turn 23 ===
+- LLM1: $193 (net $1263), at position 3 (A2 Baltic Avenue)
+- LLM2: $838 (net $1948), at position 14 (C3 Virginia Avenue)
+- Bob: $47 (net $1107), at position 10 (JL Jail)
+- Charly: $480 (net $1880), at position 37 (H1 Park Place)
+Available houses/hotels: 32/12
+
+=== LLM1 ($193.0, at A2 Baltic Avenue) goes: ===
+roll: 4, ([1, 3])
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Make general repairs on all your property. For each house pay $25. For each hotel pay $100'
+Repair cost: $0
+=== LLM2 ($838, at C3 Virginia Avenue) goes: ===
+roll: 8, ([2, 6])
+LLM2 goes to: CH2 Chance
+LLM2 drew Chance card: 'Bank pays you dividend of $50'
+LLM2 gets $50
+=== Bob ($47, at JL Jail) goes: ===
+roll: 3, ([1, 2])
+Bob stays in jail
+=== Charly ($480, at H1 Park Place) goes: ===
+roll: 9, ([3, 6])
+ Charly receives salary $200
+Charly goes to: B1 Oriental Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $90
+
+== GAME 1 Turn 24 ===
+- LLM1: $193 (net $1263), at position 7 (CH1 Chance)
+- LLM2: $888 (net $1998), at position 22 (CH2 Chance)
+- Bob: $137 (net $1197), at position 10 (JL Jail)
+- Charly: $590 (net $1990), at position 6 (B1 Oriental Avenue)
+Available houses/hotels: 32/12
+
+=== LLM1 ($193.0, at CH1 Chance) goes: ===
+roll: 4, ([1, 3])
+LLM1 goes to: C1 St. Charles Place
+Property is mortgaged, no rent
+=== LLM2 ($888, at CH2 Chance) goes: ===
+roll: 6, ([3, 3],double)
+LLM2 goes to: U2 Waterworks
+Own property, no rent
+LLM2 rolled a double (1 in a row) so they go again.
+LLM2 batched strategy: trade=False, improvements=0
+=== LLM2 ($888, at U2 Waterworks) goes: ===
+roll: 5, ([2, 3])
+LLM2 goes to: COM3 Community Chest
+LLM2 drew Community Chest card: 'You are assessed for street repair. $40 per house. $115 per hotel'
+Repair cost: $0
+=== Bob ($137, at JL Jail) goes: ===
+roll: 5, ([1, 4])
+Bob did not rolled a double for the third time, pays 50 and leaves jail
+Bob goes to: R2 Pennsylvania Railroad
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $50
+=== Charly ($640, at B1 Oriental Avenue) goes: ===
+roll: 7, ([4, 3])
+Charly goes to: C2 States Avenue
+Charly landed on a property, owned by LLM1
+Charly pays LLM1 rent $10
+
+== GAME 1 Turn 25 ===
+- LLM1: $203 (net $1273), at position 11 (C1 St. Charles Place)
+- LLM2: $888 (net $1998), at position 33 (COM3 Community Chest)
+- Bob: $37 (net $1097), at position 15 (R2 Pennsylvania Railroad)
+- Charly: $630 (net $2030), at position 13 (C2 States Avenue)
+Available houses/hotels: 32/12
+
+LLM1 batched strategy: trade=True, improvements=0
+✗ LLM2 rejected trade from LLM1
+=== LLM1 ($203.0, at C1 St. Charles Place) goes: ===
+roll: 3, ([1, 2])
+LLM1 goes to: C3 Virginia Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $12
+=== LLM2 ($888, at COM3 Community Chest) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: CH3 Chance
+LLM2 drew Chance card: 'Take a trip to Reading Railroad. If you pass Go, collect $200'
+LLM2 goes to R1 Reading Railroad
+ LLM2 receives salary $200
+Own property, no rent
+=== Bob ($37, at R2 Pennsylvania Railroad) goes: ===
+roll: 2, ([1, 1],double)
+Bob goes to: COM2 Community Chest
+Bob drew Community Chest card: 'You have won second prize in a beauty contest. Collect $10'
+Bob gets $10
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($47, at COM2 Community Chest) goes: ===
+roll: 8, ([6, 2])
+Bob goes to: R3 B&O Railroad
+Bob landed on a property, owned by Charly
+Bob has $47, he can pay $50, but needs to mortgage/sell some things for that
+Bob sells 2nd house on B1 Oriental Avenue, raising $25
+Bob pays Charly rent $50
+=== Charly ($692, at C2 States Avenue) goes: ===
+roll: 10, ([6, 4])
+Charly goes to: E2 Indiana Avenue
+Charly landed on a property, owned by LLM1
+Charly pays LLM1 rent $18
+
+== GAME 1 Turn 26 ===
+- LLM1: $209 (net $1279), at position 14 (C3 Virginia Avenue)
+- LLM2: $1088 (net $2198), at position 5 (R1 Reading Railroad)
+- Bob: $22 (net $1032), at position 25 (R3 B&O Railroad)
+- Charly: $674 (net $2074), at position 23 (E2 Indiana Avenue)
+Available houses/hotels: 33/12
+
+=== LLM1 ($209.0, at C3 Virginia Avenue) goes: ===
+roll: 6, ([1, 5])
+LLM1 goes to: FP Free Parking
+=== LLM2 ($1088, at R1 Reading Railroad) goes: ===
+roll: 3, ([2, 1])
+LLM2 goes to: B2 Vermont Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $30
+=== Bob ($52, at R3 B&O Railroad) goes: ===
+roll: 10, ([5, 5],double)
+Bob goes to: R4 Short Line
+Bob landed on a property, owned by LLM1
+Bob pays LLM1 rent $25
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($27, at R4 Short Line) goes: ===
+roll: 5, ([2, 3])
+ Bob receives salary $200
+Bob goes to: GO
+=== Charly ($674, at E2 Indiana Avenue) goes: ===
+roll: 3, ([2, 1])
+Charly goes to: F1 Atlantic Avenue
+Own property, no rent
+
+== GAME 1 Turn 27 ===
+- LLM1: $234 (net $1304), at position 20 (FP Free Parking)
+- LLM2: $1058 (net $2168), at position 8 (B2 Vermont Avenue)
+- Bob: $227 (net $1237), at position 0 (GO)
+- Charly: $674 (net $2074), at position 26 (F1 Atlantic Avenue)
+Available houses/hotels: 33/12
+
+=== LLM1 ($234.0, at FP Free Parking) goes: ===
+roll: 6, ([2, 4])
+LLM1 goes to: F1 Atlantic Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $22
+LLM2 batched strategy: trade=True, improvements=0
+✗ LLM1 rejected trade from LLM2
+=== LLM2 ($1058, at B2 Vermont Avenue) goes: ===
+roll: 4, ([1, 3])
+LLM2 goes to: U1 Electric Company
+Own property, no rent
+=== Bob ($227, at GO) goes: ===
+roll: 7, ([3, 4])
+Bob goes to: CH1 Chance
+Bob drew Chance card: 'Your building loan matures. Collect $150'
+Bob gets $150
+=== Charly ($696, at F1 Atlantic Avenue) goes: ===
+roll: 12, ([6, 6],double)
+Charly goes to: LT Luxury Tax
+Charly pays Luxury Tax $100
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($596, at LT Luxury Tax) goes: ===
+roll: 9, ([5, 4])
+ Charly receives salary $200
+Charly goes to: CH1 Chance
+Charly drew Chance card: 'Advance to Illinois Avenue. If you pass Go, collect $200'
+Charly goes to E3 Illinois Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $20
+
+== GAME 1 Turn 28 ===
+- LLM1: $212 (net $1282), at position 26 (F1 Atlantic Avenue)
+- LLM2: $1058 (net $2168), at position 12 (U1 Electric Company)
+- Bob: $397 (net $1407), at position 7 (CH1 Chance)
+- Charly: $776 (net $2176), at position 24 (E3 Illinois Avenue)
+Available houses/hotels: 33/12
+
+LLM1 batched strategy: trade=True, improvements=0
+↔ LLM2 made counter-offer #1
+✓ LLM1 accepted trade from LLM2
+LLM Trade executed: LLM2 gave ['U1 Electric Company'] and $0, received ['D3 New York Avenue'] and $0 from LLM1
+✓ Trade completed: LLM2 ↔ LLM1
+=== LLM1 ($212.0, at F1 Atlantic Avenue) goes: ===
+roll: 2, ([1, 1],double)
+LLM1 goes to: U2 Waterworks
+LLM1 landed on a property, owned by LLM2
+roll: 9, ([6, 3])
+LLM1 pays LLM2 rent $36
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($176.0, at U2 Waterworks) goes: ===
+roll: 4, ([1, 3])
+LLM1 goes to: G2 North Carolina Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $26
+=== LLM2 ($1094, at U1 Electric Company) goes: ===
+roll: 7, ([6, 1])
+LLM2 goes to: D3 New York Avenue
+Own property, no rent
+=== Bob ($397, at CH1 Chance) goes: ===
+Bob built 2nd house on B1 Oriental Avenue for $50
+Bob built 2nd house on B3 Connecticut Avenue for $50
+Bob built 2nd house on B2 Vermont Avenue for $50
+roll: 11, ([5, 6])
+Bob goes to: D2 Tennessee Avenue
+Bob landed on a property, owned by LLM1
+Bob pays LLM1 rent $14
+=== Charly ($802, at E3 Illinois Avenue) goes: ===
+roll: 7, ([1, 6])
+Charly goes to: G1 Pacific Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $26
+
+== GAME 1 Turn 29 ===
+- LLM1: $164 (net $1184), at position 32 (G2 North Carolina Avenue)
+- LLM2: $1094 (net $2254), at position 19 (D3 New York Avenue)
+- Bob: $259 (net $1419), at position 18 (D2 Tennessee Avenue)
+- Charly: $776 (net $2176), at position 31 (G1 Pacific Avenue)
+Available houses/hotels: 30/12
+
+=== LLM1 ($164.0, at G2 North Carolina Avenue) goes: ===
+roll: 5, ([2, 3])
+LLM1 goes to: H1 Park Place
+LLM1 landed on a property, owned by LLM2
+LLM1 pays LLM2 rent $35
+=== LLM2 ($1129, at D3 New York Avenue) goes: ===
+roll: 12, ([6, 6],double)
+LLM2 goes to: G1 Pacific Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $26
+LLM2 rolled a double (1 in a row) so they go again.
+LLM2 batched strategy: trade=True, improvements=0
+↔ LLM1 made counter-offer #1
+✓ LLM2 accepted trade from LLM1
+LLM Trade executed: LLM1 gave ['R4 Short Line'] and $0, received ['R1 Reading Railroad'] and $0 from LLM2
+✓ Trade completed: LLM1 ↔ LLM2
+=== LLM2 ($1103, at G1 Pacific Avenue) goes: ===
+roll: 8, ([3, 5])
+LLM2 goes to: H2 Boardwalk
+LLM2 (LLM) bought H2 Boardwalk for $400
+=== Bob ($285, at D2 Tennessee Avenue) goes: ===
+Bob built 3rd house on B1 Oriental Avenue for $50
+roll: 7, ([4, 3])
+Bob goes to: R3 B&O Railroad
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $50
+=== Charly ($826, at G1 Pacific Avenue) goes: ===
+roll: 5, ([1, 4])
+Charly goes to: CH3 Chance
+Charly drew Chance card: 'You have been elected Chairman of the Board. Pay each player $50'
+Charly pays LLM1 $50
+Charly pays LLM2 $50
+Charly pays Bob $50
+
+== GAME 1 Turn 30 ===
+- LLM1: $179 (net $1199), at position 37 (H1 Park Place)
+- LLM2: $753 (net $2313), at position 39 (H2 Boardwalk)
+- Bob: $235 (net $1445), at position 25 (R3 B&O Railroad)
+- Charly: $676 (net $2076), at position 36 (CH3 Chance)
+Available houses/hotels: 29/12
+
+LLM1 batched strategy: trade=False, improvements=0
+=== LLM1 ($179.0, at H1 Park Place) goes: ===
+roll: 9, ([6, 3])
+ LLM1 receives salary $200
+LLM1 goes to: B1 Oriental Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $270
+=== LLM2 ($753, at H2 Boardwalk) goes: ===
+roll: 2, ([1, 1],double)
+ LLM2 receives salary $200
+LLM2 goes to: A1 Mediterranean Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $2
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($951, at A1 Mediterranean Avenue) goes: ===
+LLM2 (LLM) built house #1 on H1 Park Place for $200
+LLM2 (LLM) built house #1 on H2 Boardwalk for $200
+roll: 8, ([3, 5])
+LLM2 goes to: B3 Connecticut Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $100
+=== Bob ($605, at R3 B&O Railroad) goes: ===
+Bob built 3rd house on B3 Connecticut Avenue for $50
+Bob built 3rd house on B2 Vermont Avenue for $50
+Bob built 4th house on B1 Oriental Avenue for $50
+Bob built 4th house on B3 Connecticut Avenue for $50
+Bob built 4th house on B2 Vermont Avenue for $50
+Bob built a hotel on B1 Oriental Avenue
+Bob built a hotel on B3 Connecticut Avenue
+Bob built a hotel on B2 Vermont Avenue
+roll: 2, ([1, 1],double)
+Bob goes to: F2 Ventnor Avenue
+Bob landed on a property, owned by LLM2
+Bob pays LLM2 rent $22
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($183, at F2 Ventnor Avenue) goes: ===
+roll: 6, ([5, 1])
+Bob goes to: COM3 Community Chest
+Bob drew Community Chest card: 'Holiday fund matures. Receive $100'
+Bob gets $100
+=== Charly ($678, at CH3 Chance) goes: ===
+roll: 6, ([2, 4])
+ Charly receives salary $200
+Charly goes to: COM1 Community Chest
+Charly drew Community Chest card: 'Receive $25 consultancy fee'
+Charly gets $25
+
+== GAME 1 Turn 31 ===
+- LLM1: $109 (net $1129), at position 6 (B1 Oriental Avenue)
+- LLM2: $473 (net $2433), at position 9 (B3 Connecticut Avenue)
+- Bob: $283 (net $1293), at position 33 (COM3 Community Chest)
+- Charly: $903 (net $2303), at position 2 (COM1 Community Chest)
+Available houses/hotels: 34/9
+
+=== LLM1 ($109.0, at B1 Oriental Avenue) goes: ===
+roll: 3, ([1, 2])
+LLM1 goes to: B3 Connecticut Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 has to pay $600, max they can raise is $584.0
+LLM1 is bankrupt
+LLM1 mortgages A2 Baltic Avenue, raising $30
+LLM1 mortgages C2 States Avenue, raising $70
+LLM1 mortgages U1 Electric Company, raising $75
+LLM1 mortgages D2 Tennessee Avenue, raising $90
+LLM1 mortgages R1 Reading Railroad, raising $100
+LLM1 mortgages E2 Indiana Avenue, raising $110
+LLM1 gave Bob all their remaining money ($584.0)
+LLM1 transfers R1 Reading Railroad to Bob
+LLM1 transfers U1 Electric Company to Bob
+LLM1 transfers C2 States Avenue to Bob
+LLM1 transfers A2 Baltic Avenue to Bob
+LLM1 transfers D2 Tennessee Avenue to Bob
+LLM1 transfers C1 St. Charles Place to Bob
+LLM1 transfers E2 Indiana Avenue to Bob
+LLM2 batched strategy: trade=False, improvements=2
+=== LLM2 ($473, at B3 Connecticut Avenue) goes: ===
+LLM2 (LLM) built house #2 on H1 Park Place for $200
+LLM2 insufficient cash to improve H2 Boardwalk
+roll: 6, ([4, 2])
+LLM2 goes to: R2 Pennsylvania Railroad
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $50
+LLM2 tried to improve unknown property: H1 Park Place
+LLM2 insufficient cash to improve H2 Boardwalk
+=== Bob ($867.0, at COM3 Community Chest) goes: ===
+Bob unmortgages R1 Reading Railroad for $120.0
+Bob unmortgages U1 Electric Company for $90.0
+Bob unmortgages C2 States Avenue for $84.0
+Bob unmortgages A2 Baltic Avenue for $36.0
+Bob unmortgages D2 Tennessee Avenue for $108.0
+Bob unmortgages C1 St. Charles Place for $84.0
+Bob unmortgages E2 Indiana Avenue for $132.0
+roll: 9, ([4, 5])
+ Bob receives salary $200
+Bob goes to: COM1 Community Chest
+Bob drew Community Chest card: 'Income tax refund. Collect $20'
+Bob gets $20
+=== Charly ($953, at COM1 Community Chest) goes: ===
+roll: 9, ([6, 3])
+Charly goes to: C1 St. Charles Place
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $10
+
+== GAME 1 Turn 32 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $223 (net $2383), at position 15 (R2 Pennsylvania Railroad)
+- Bob: $443 (net $2543), at position 2 (COM1 Community Chest)
+- Charly: $943 (net $2343), at position 11 (C1 St. Charles Place)
+Available houses/hotels: 33/9
+
+=== LLM2 ($223, at R2 Pennsylvania Railroad) goes: ===
+LLM2 insufficient cash to improve H2 Boardwalk
+roll: 5, ([2, 3])
+LLM2 goes to: FP Free Parking
+=== Bob ($443.0, at COM1 Community Chest) goes: ===
+roll: 4, ([1, 3])
+Bob goes to: B1 Oriental Avenue
+Own property, no rent
+=== Charly ($943, at C1 St. Charles Place) goes: ===
+roll: 8, ([5, 3])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $16
+
+== GAME 1 Turn 33 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $239 (net $2399), at position 20 (FP Free Parking)
+- Bob: $443 (net $2543), at position 6 (B1 Oriental Avenue)
+- Charly: $927 (net $2327), at position 19 (D3 New York Avenue)
+Available houses/hotels: 33/9
+
+=== LLM2 ($239, at FP Free Parking) goes: ===
+LLM2 insufficient cash to improve H2 Boardwalk
+roll: 5, ([2, 3])
+LLM2 goes to: R3 B&O Railroad
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $50
+=== Bob ($443.0, at B1 Oriental Avenue) goes: ===
+roll: 12, ([6, 6],double)
+Bob goes to: D2 Tennessee Avenue
+Own property, no rent
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($443.0, at D2 Tennessee Avenue) goes: ===
+roll: 9, ([4, 5])
+Bob goes to: F2 Ventnor Avenue
+Bob landed on a property, owned by LLM2
+Bob pays LLM2 rent $22
+=== Charly ($977, at D3 New York Avenue) goes: ===
+roll: 9, ([5, 4])
+Charly goes to: U2 Waterworks
+Charly landed on a property, owned by LLM2
+roll: 10, ([6, 4])
+Charly pays LLM2 rent $40
+
+== GAME 1 Turn 34 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $251 (net $2411), at position 25 (R3 B&O Railroad)
+- Bob: $421 (net $2521), at position 27 (F2 Ventnor Avenue)
+- Charly: $937 (net $2337), at position 28 (U2 Waterworks)
+Available houses/hotels: 33/9
+
+LLM2 batched strategy: trade=False, improvements=0
+=== LLM2 ($251, at R3 B&O Railroad) goes: ===
+LLM2 insufficient cash to improve H2 Boardwalk
+roll: 10, ([6, 4])
+LLM2 goes to: R4 Short Line
+Own property, no rent
+=== Bob ($421.0, at F2 Ventnor Avenue) goes: ===
+roll: 6, ([4, 2])
+Bob goes to: COM3 Community Chest
+Bob drew Community Chest card: 'You inherit $100'
+=== Charly ($937, at U2 Waterworks) goes: ===
+roll: 4, ([2, 2],double)
+Charly goes to: G2 North Carolina Avenue
+Own property, no rent
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($937, at G2 North Carolina Avenue) goes: ===
+roll: 7, ([6, 1])
+Charly goes to: H2 Boardwalk
+Charly landed on a property, owned by LLM2
+Charly pays LLM2 rent $200
+
+== GAME 1 Turn 35 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $451 (net $2611), at position 35 (R4 Short Line)
+- Bob: $421 (net $2521), at position 33 (COM3 Community Chest)
+- Charly: $737 (net $2137), at position 39 (H2 Boardwalk)
+Available houses/hotels: 33/9
+
+=== LLM2 ($451, at R4 Short Line) goes: ===
+LLM2 (LLM) built house #2 on H2 Boardwalk for $200
+roll: 11, ([5, 6])
+ LLM2 receives salary $200
+LLM2 goes to: B1 Oriental Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 has $451, he can pay $550, but needs to mortgage/sell some things for that
+LLM2 sells 2nd house on H1 Park Place, raising $100
+LLM2 pays Bob rent $550
+=== Bob ($971.0, at COM3 Community Chest) goes: ===
+roll: 8, ([6, 2])
+ Bob receives salary $200
+Bob goes to: A1 Mediterranean Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $2
+=== Charly ($739, at H2 Boardwalk) goes: ===
+roll: 6, ([5, 1])
+ Charly receives salary $200
+Charly goes to: R1 Reading Railroad
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $25
+
+== GAME 1 Turn 36 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $1 (net $2161), at position 6 (B1 Oriental Avenue)
+- Bob: $1194 (net $3294), at position 1 (A1 Mediterranean Avenue)
+- Charly: $914 (net $2314), at position 5 (R1 Reading Railroad)
+Available houses/hotels: 33/9
+
+=== LLM2 ($1, at B1 Oriental Avenue) goes: ===
+roll: 9, ([5, 4])
+LLM2 goes to: R2 Pennsylvania Railroad
+LLM2 landed on a property, owned by Charly
+LLM2 has $1, he can pay $50, but needs to mortgage/sell some things for that
+LLM2 sells 2nd house on H2 Boardwalk, raising $100
+LLM2 pays Charly rent $50
+=== Bob ($1194.0, at A1 Mediterranean Avenue) goes: ===
+roll: 7, ([6, 1])
+Bob goes to: B2 Vermont Avenue
+Own property, no rent
+=== Charly ($964, at R1 Reading Railroad) goes: ===
+roll: 8, ([3, 5])
+Charly goes to: C2 States Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $10
+
+== GAME 1 Turn 37 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $51 (net $2011), at position 15 (R2 Pennsylvania Railroad)
+- Bob: $1204 (net $3304), at position 8 (B2 Vermont Avenue)
+- Charly: $954 (net $2354), at position 13 (C2 States Avenue)
+Available houses/hotels: 34/9
+
+LLM2 batched strategy: trade=False, improvements=0
+=== LLM2 ($51, at R2 Pennsylvania Railroad) goes: ===
+roll: 7, ([4, 3])
+LLM2 goes to: CH2 Chance
+LLM2 drew Chance card: 'Advance to the nearest Railroad. If owned, pay owner twice the rental to which they are otherwise entitled'
+LLM2 goes to R3 B&O Railroad
+LLM2 landed on a property, owned by Charly
+Per Chance card, rent is doubled ($100).
+LLM2 has $51, he can pay $100, but needs to mortgage/sell some things for that
+LLM2 sells 1st house on H1 Park Place, raising $100
+LLM2 pays Charly rent $100
+=== Bob ($1204.0, at B2 Vermont Avenue) goes: ===
+roll: 8, ([6, 2])
+Bob goes to: D1 St. James Place
+Bob bought D1 St. James Place for $180
+=== Charly ($1054, at C2 States Avenue) goes: ===
+roll: 5, ([3, 2])
+Charly goes to: D2 Tennessee Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $14
+
+== GAME 1 Turn 38 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $51 (net $1811), at position 25 (R3 B&O Railroad)
+- Bob: $1038 (net $3318), at position 16 (D1 St. James Place)
+- Charly: $1040 (net $2440), at position 18 (D2 Tennessee Avenue)
+Available houses/hotels: 35/9
+
+=== LLM2 ($51, at R3 B&O Railroad) goes: ===
+Trade: LLM2 gives ['D3 New York Avenue'], receives ['U1 Electric Company'] from Bob
+LLM2 received price difference compensation $50 from Bob
+LLM2 insufficient cash to improve H1 Park Place
+roll: 6, ([2, 4])
+LLM2 goes to: G1 Pacific Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $26
+=== Bob ($1014.0, at D1 St. James Place) goes: ===
+Bob built 1st house on D2 Tennessee Avenue for $100
+Bob built 1st house on D1 St. James Place for $100
+Bob built 1st house on D3 New York Avenue for $100
+Bob built 2nd house on D2 Tennessee Avenue for $100
+Bob built 2nd house on D1 St. James Place for $100
+Bob built 2nd house on D3 New York Avenue for $100
+Bob built 3rd house on D2 Tennessee Avenue for $100
+Bob built 3rd house on D1 St. James Place for $100
+roll: 2, ([1, 1],double)
+Bob goes to: D2 Tennessee Avenue
+Own property, no rent
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($214.0, at D2 Tennessee Avenue) goes: ===
+roll: 3, ([1, 2])
+Bob goes to: E1 Kentucky Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $18
+=== Charly ($1058, at D2 Tennessee Avenue) goes: ===
+roll: 6, ([5, 1])
+Charly goes to: E3 Illinois Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $20
+
+== GAME 1 Turn 39 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $75 (net $1785), at position 31 (G1 Pacific Avenue)
+- Bob: $216 (net $3346), at position 21 (E1 Kentucky Avenue)
+- Charly: $1038 (net $2438), at position 24 (E3 Illinois Avenue)
+Available houses/hotels: 27/9
+
+=== LLM2 ($75, at G1 Pacific Avenue) goes: ===
+roll: 10, ([5, 5],double)
+ LLM2 receives salary $200
+LLM2 goes to: A1 Mediterranean Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $2
+LLM2 rolled a double (1 in a row) so they go again.
+LLM2 batched strategy: trade=False, improvements=1
+=== LLM2 ($273, at A1 Mediterranean Avenue) goes: ===
+roll: 10, ([4, 6])
+LLM2 goes to: C1 St. Charles Place
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $10
+LLM2 insufficient cash to improve H1 Park Place
+=== Bob ($226.0, at E1 Kentucky Avenue) goes: ===
+roll: 10, ([4, 6])
+Bob goes to: G1 Pacific Avenue
+Own property, no rent
+=== Charly ($1040, at E3 Illinois Avenue) goes: ===
+roll: 7, ([6, 1])
+Charly goes to: G1 Pacific Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $26
+
+== GAME 1 Turn 40 ===
+- Player 0, 'LLM1': Bankrupt
+- LLM2: $263 (net $1973), at position 11 (C1 St. Charles Place)
+- Bob: $252 (net $3382), at position 31 (G1 Pacific Avenue)
+- Charly: $1014 (net $2414), at position 31 (G1 Pacific Avenue)
+Available houses/hotels: 27/9
+
+=== LLM2 ($263, at C1 St. Charles Place) goes: ===
+roll: 11, ([5, 6])
+LLM2 goes to: CH2 Chance
+LLM2 drew Chance card: 'Get Out of Jail Free'
+LLM2 now has a 'Get Out of Jail Free' card
+=== Bob ($252.0, at G1 Pacific Avenue) goes: ===
+roll: 8, ([2, 6])
+Bob goes to: H2 Boardwalk
+Bob landed on a property, owned by LLM2
+Bob pays LLM2 rent $200
+=== Charly ($1014, at G1 Pacific Avenue) goes: ===
+roll: 7, ([3, 4])
+Charly goes to: LT Luxury Tax
+Charly pays Luxury Tax $100
+[PRINT] ✓ Chat history saved to /Users/federicobaldan/Desktop/monopoly/results/run_20251203_102708_gpt-oss-20b-cloud/game_1_LLM1_chat_history.txt
+[PRINT] ✓ Chat history saved to /Users/federicobaldan/Desktop/monopoly/results/run_20251203_102708_gpt-oss-20b-cloud/game_1_LLM2_chat_history.txt
+
+== BOARD ==
+- A1 Mediterranean Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- A2 Baltic Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- R1 Reading Railroad, Owner: Bob, Rent multiplier: 1, Improvements: none
+- B1 Oriental Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- B2 Vermont Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- B3 Connecticut Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- C1 St. Charles Place, Owner: Bob, Rent multiplier: 1, Improvements: none
+- U1 Electric Company, Owner: LLM2, Rent multiplier: 10, Improvements: none
+- C2 States Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- C3 Virginia Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- R2 Pennsylvania Railroad, Owner: Charly, Rent multiplier: 2, Improvements: none
+- D1 St. James Place, Owner: Bob, Rent multiplier: 2, Improvements: 3 house(s)
+- D2 Tennessee Avenue, Owner: Bob, Rent multiplier: 2, Improvements: 3 house(s)
+- D3 New York Avenue, Owner: Bob, Rent multiplier: 2, Improvements: 2 house(s)
+- E1 Kentucky Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- E2 Indiana Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- E3 Illinois Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- R3 B&O Railroad, Owner: Charly, Rent multiplier: 2, Improvements: none
+- F1 Atlantic Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- F2 Ventnor Avenue, Owner: LLM2, Rent multiplier: 1, Improvements: none
+- U2 Waterworks, Owner: LLM2, Rent multiplier: 10, Improvements: none
+- F3 Marvin Gardens, Owner: None, Rent multiplier: 1, Improvements: none
+- G1 Pacific Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- G2 North Carolina Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- G3 Pennsylvania Avenue, Owner: None, Rent multiplier: 1, Improvements: none
+- R4 Short Line, Owner: LLM2, Rent multiplier: 1, Improvements: none
+- H1 Park Place, Owner: LLM2, Rent multiplier: 2, Improvements: none
+- H2 Boardwalk, Owner: LLM2, Rent multiplier: 2, Improvements: 1 house(s)
+

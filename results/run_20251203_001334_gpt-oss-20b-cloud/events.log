@@ -1,0 +1,1337 @@
+Events log
+= GAME 1 of 1 (seed = 3626764237) =
+[PRINT] ✓ Llama chat created for LLM1 (model: gpt-oss:20b-cloud)
+[PRINT] ✓ Llama chat created for LLM2 (model: gpt-oss:20b-cloud)
+
+== GAME 1 Turn 1 ===
+- LLM1: $1000 (net $1000), at position 0 (GO)
+- LLM2: $1000 (net $1000), at position 0 (GO)
+- Bob: $1000 (net $1000), at position 0 (GO)
+- Charly: $1000 (net $1000), at position 0 (GO)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1000, at GO) goes: ===
+roll: 2, ([1, 1],double)
+LLM1 goes to: COM1 Community Chest
+LLM1 drew Community Chest card: 'You inherit $100'
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1000, at COM1 Community Chest) goes: ===
+roll: 5, ([1, 4])
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Advance token to nearest Utility. If owned, throw dice and pay owner a total ten times amount thrown.'
+LLM1 goes to U1 Electric Company
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on U1 Electric Company
+=== LLM2 ($1000, at GO) goes: ===
+roll: 11, ([5, 6])
+LLM2 goes to: C1 St. Charles Place
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on C1 St. Charles Place
+=== Bob ($1000, at GO) goes: ===
+roll: 6, ([2, 4])
+Bob goes to: B1 Oriental Avenue
+Bob bought B1 Oriental Avenue for $100
+=== Charly ($1000, at GO) goes: ===
+roll: 6, ([3, 3],double)
+Charly goes to: B1 Oriental Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $6
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($994, at B1 Oriental Avenue) goes: ===
+roll: 5, ([4, 1])
+Charly goes to: C1 St. Charles Place
+Charly bought C1 St. Charles Place for $140
+
+== GAME 1 Turn 2 ===
+- LLM1: $1000 (net $1000), at position 12 (U1 Electric Company)
+- LLM2: $1000 (net $1000), at position 11 (C1 St. Charles Place)
+- Bob: $906 (net $1006), at position 6 (B1 Oriental Avenue)
+- Charly: $854 (net $994), at position 11 (C1 St. Charles Place)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1000, at U1 Electric Company) goes: ===
+roll: 8, ([2, 6])
+LLM1 goes to: FP Free Parking
+=== LLM2 ($1000, at C1 St. Charles Place) goes: ===
+roll: 9, ([4, 5])
+LLM2 goes to: FP Free Parking
+=== Bob ($906, at B1 Oriental Avenue) goes: ===
+roll: 6, ([2, 4])
+Bob goes to: U1 Electric Company
+Bob bought U1 Electric Company for $150
+=== Charly ($854, at C1 St. Charles Place) goes: ===
+roll: 3, ([2, 1])
+Charly goes to: C3 Virginia Avenue
+Charly bought C3 Virginia Avenue for $160
+
+== GAME 1 Turn 3 ===
+- LLM1: $1000 (net $1000), at position 20 (FP Free Parking)
+- LLM2: $1000 (net $1000), at position 20 (FP Free Parking)
+- Bob: $756 (net $1006), at position 12 (U1 Electric Company)
+- Charly: $694 (net $994), at position 14 (C3 Virginia Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1000, at FP Free Parking) goes: ===
+roll: 6, ([2, 4])
+LLM1 goes to: F1 Atlantic Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on F1 Atlantic Avenue
+=== LLM2 ($1000, at FP Free Parking) goes: ===
+roll: 8, ([5, 3])
+LLM2 goes to: U2 Waterworks
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on U2 Waterworks
+=== Bob ($756, at U1 Electric Company) goes: ===
+roll: 10, ([6, 4])
+Bob goes to: CH2 Chance
+Bob drew Chance card: 'Advance to Boardwalk'
+Bob goes to H2 Boardwalk
+Bob bought H2 Boardwalk for $400
+=== Charly ($694, at C3 Virginia Avenue) goes: ===
+roll: 8, ([6, 2])
+Charly goes to: CH2 Chance
+Charly drew Chance card: 'Speeding fine $15'
+
+== GAME 1 Turn 4 ===
+- LLM1: $1000 (net $1000), at position 26 (F1 Atlantic Avenue)
+- LLM2: $1000 (net $1000), at position 28 (U2 Waterworks)
+- Bob: $356 (net $1006), at position 39 (H2 Boardwalk)
+- Charly: $679 (net $979), at position 22 (CH2 Chance)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1000, at F1 Atlantic Avenue) goes: ===
+roll: 9, ([4, 5])
+LLM1 goes to: R4 Short Line
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on R4 Short Line
+=== LLM2 ($1000, at U2 Waterworks) goes: ===
+roll: 7, ([5, 2])
+LLM2 goes to: R4 Short Line
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on R4 Short Line
+=== Bob ($356, at H2 Boardwalk) goes: ===
+roll: 8, ([4, 4],double)
+ Bob receives salary $200
+Bob goes to: CH1 Chance
+Bob drew Chance card: 'Advance to Go (Collect $200)'
+Bob goes to GO
+ Bob receives salary $200
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($756, at GO) goes: ===
+roll: 9, ([3, 6])
+Bob goes to: B3 Connecticut Avenue
+Bob bought B3 Connecticut Avenue for $120
+=== Charly ($679, at CH2 Chance) goes: ===
+roll: 11, ([6, 5])
+Charly goes to: COM3 Community Chest
+Charly drew Community Chest card: 'It is your birthday. Collect $10 from every player'
+LLM1 pays Charly $10
+LLM2 pays Charly $10
+Bob pays Charly $10
+
+== GAME 1 Turn 5 ===
+- LLM1: $950 (net $950), at position 35 (R4 Short Line)
+- LLM2: $950 (net $950), at position 35 (R4 Short Line)
+- Bob: $586 (net $1356), at position 9 (B3 Connecticut Avenue)
+- Charly: $829 (net $1129), at position 33 (COM3 Community Chest)
+Available houses/hotels: 36/12
+
+=== LLM1 ($950, at R4 Short Line) goes: ===
+roll: 7, ([4, 3])
+ LLM1 receives salary $200
+LLM1 goes to: COM1 Community Chest
+LLM1 drew Community Chest card: 'Get Out of Jail Free'
+LLM1 now has a 'Get Out of Jail Free' card
+=== LLM2 ($950, at R4 Short Line) goes: ===
+roll: 3, ([2, 1])
+LLM2 goes to: LT Luxury Tax
+LLM2 pays Luxury Tax $100
+=== Bob ($586, at B3 Connecticut Avenue) goes: ===
+roll: 10, ([4, 6])
+Bob goes to: D3 New York Avenue
+Bob bought D3 New York Avenue for $200
+=== Charly ($829, at COM3 Community Chest) goes: ===
+roll: 5, ([4, 1])
+Charly goes to: LT Luxury Tax
+Charly pays Luxury Tax $100
+
+== GAME 1 Turn 6 ===
+- LLM1: $1150 (net $1150), at position 2 (COM1 Community Chest)
+- LLM2: $850 (net $850), at position 38 (LT Luxury Tax)
+- Bob: $386 (net $1356), at position 19 (D3 New York Avenue)
+- Charly: $729 (net $1029), at position 38 (LT Luxury Tax)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1150, at COM1 Community Chest) goes: ===
+roll: 4, ([2, 2],double)
+LLM1 goes to: B1 Oriental Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $6
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1144, at B1 Oriental Avenue) goes: ===
+roll: 10, ([6, 4])
+LLM1 goes to: D1 St. James Place
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on D1 St. James Place
+=== LLM2 ($850, at LT Luxury Tax) goes: ===
+roll: 9, ([3, 6])
+ LLM2 receives salary $200
+LLM2 goes to: CH1 Chance
+LLM2 drew Chance card: 'Advance to St. Charles Place. If you pass Go, collect $200'
+LLM2 goes to C1 St. Charles Place
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $10
+=== Bob ($392, at D3 New York Avenue) goes: ===
+roll: 7, ([3, 4])
+Bob goes to: F1 Atlantic Avenue
+Bob landed on a F1 Atlantic Avenue, he refuses to buy it
+=== Charly ($739, at LT Luxury Tax) goes: ===
+roll: 7, ([3, 4])
+ Charly receives salary $200
+Charly goes to: R1 Reading Railroad
+Charly bought R1 Reading Railroad for $200
+
+== GAME 1 Turn 7 ===
+- LLM1: $1144 (net $1144), at position 16 (D1 St. James Place)
+- LLM2: $1040 (net $1040), at position 11 (C1 St. Charles Place)
+- Bob: $392 (net $1362), at position 26 (F1 Atlantic Avenue)
+- Charly: $739 (net $1239), at position 5 (R1 Reading Railroad)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1144, at D1 St. James Place) goes: ===
+roll: 11, ([6, 5])
+LLM1 goes to: F2 Ventnor Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on F2 Ventnor Avenue
+=== LLM2 ($1040, at C1 St. Charles Place) goes: ===
+roll: 11, ([5, 6])
+LLM2 goes to: CH2 Chance
+LLM2 drew Chance card: 'Go Back 3 Spaces'
+LLM2 goes to D3 New York Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $16
+=== Bob ($408, at F1 Atlantic Avenue) goes: ===
+roll: 7, ([2, 5])
+Bob goes to: COM3 Community Chest
+Bob drew Community Chest card: 'Pay school fees of $50'
+=== Charly ($739, at R1 Reading Railroad) goes: ===
+roll: 3, ([2, 1])
+Charly goes to: B2 Vermont Avenue
+Charly bought B2 Vermont Avenue for $100
+
+== GAME 1 Turn 8 ===
+- LLM1: $1144 (net $1144), at position 27 (F2 Ventnor Avenue)
+- LLM2: $1024 (net $1024), at position 19 (D3 New York Avenue)
+- Bob: $358 (net $1328), at position 33 (COM3 Community Chest)
+- Charly: $639 (net $1239), at position 8 (B2 Vermont Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1144, at F2 Ventnor Avenue) goes: ===
+roll: 9, ([5, 4])
+LLM1 goes to: CH3 Chance
+LLM1 drew Chance card: 'Make general repairs on all your property. For each house pay $25. For each hotel pay $100'
+Repair cost: $0
+=== LLM2 ($1024, at D3 New York Avenue) goes: ===
+roll: 6, ([1, 5])
+LLM2 goes to: R3 B&O Railroad
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on R3 B&O Railroad
+=== Bob ($358, at COM3 Community Chest) goes: ===
+roll: 2, ([1, 1],double)
+Bob goes to: R4 Short Line
+Bob landed on a R4 Short Line, he refuses to buy it
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($358, at R4 Short Line) goes: ===
+roll: 6, ([1, 5])
+ Bob receives salary $200
+Bob goes to: A1 Mediterranean Avenue
+Bob bought A1 Mediterranean Avenue for $60
+=== Charly ($639, at B2 Vermont Avenue) goes: ===
+roll: 9, ([6, 3])
+Charly goes to: COM2 Community Chest
+Charly drew Community Chest card: 'Life insurance matures. Collect $100'
+Charly gets $100
+
+== GAME 1 Turn 9 ===
+- LLM1: $1144 (net $1144), at position 36 (CH3 Chance)
+- LLM2: $1024 (net $1024), at position 25 (R3 B&O Railroad)
+- Bob: $498 (net $1528), at position 1 (A1 Mediterranean Avenue)
+- Charly: $739 (net $1339), at position 17 (COM2 Community Chest)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1144, at CH3 Chance) goes: ===
+roll: 5, ([2, 3])
+ LLM1 receives salary $200
+LLM1 goes to: A1 Mediterranean Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $2
+=== LLM2 ($1024, at R3 B&O Railroad) goes: ===
+roll: 6, ([1, 5])
+LLM2 goes to: G1 Pacific Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on G1 Pacific Avenue
+=== Bob ($500, at A1 Mediterranean Avenue) goes: ===
+roll: 9, ([5, 4])
+Bob goes to: JL Jail
+=== Charly ($739, at COM2 Community Chest) goes: ===
+roll: 7, ([5, 2])
+Charly goes to: E3 Illinois Avenue
+Charly bought E3 Illinois Avenue for $240
+
+== GAME 1 Turn 10 ===
+- LLM1: $1342 (net $1342), at position 1 (A1 Mediterranean Avenue)
+- LLM2: $1024 (net $1024), at position 31 (G1 Pacific Avenue)
+- Bob: $500 (net $1530), at position 10 (JL Jail)
+- Charly: $499 (net $1339), at position 24 (E3 Illinois Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1342, at A1 Mediterranean Avenue) goes: ===
+roll: 6, ([4, 2])
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Bank pays you dividend of $50'
+LLM1 gets $50
+=== LLM2 ($1024, at G1 Pacific Avenue) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: G3 Pennsylvania Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on G3 Pennsylvania Avenue
+=== Bob ($500, at JL Jail) goes: ===
+roll: 7, ([3, 4])
+Bob goes to: COM2 Community Chest
+Bob drew Community Chest card: 'Pay hospital fees of $100'
+=== Charly ($499, at E3 Illinois Avenue) goes: ===
+roll: 7, ([6, 1])
+Charly goes to: G1 Pacific Avenue
+Charly landed on a G1 Pacific Avenue, he refuses to buy it
+
+== GAME 1 Turn 11 ===
+- LLM1: $1392 (net $1392), at position 7 (CH1 Chance)
+- LLM2: $1024 (net $1024), at position 34 (G3 Pennsylvania Avenue)
+- Bob: $400 (net $1430), at position 17 (COM2 Community Chest)
+- Charly: $499 (net $1339), at position 31 (G1 Pacific Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1392, at CH1 Chance) goes: ===
+roll: 11, ([6, 5])
+LLM1 goes to: D2 Tennessee Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on D2 Tennessee Avenue
+=== LLM2 ($1024, at G3 Pennsylvania Avenue) goes: ===
+roll: 6, ([1, 5])
+ LLM2 receives salary $200
+LLM2 goes to: GO
+=== Bob ($400, at COM2 Community Chest) goes: ===
+roll: 9, ([3, 6])
+Bob goes to: F1 Atlantic Avenue
+Bob landed on a F1 Atlantic Avenue, he refuses to buy it
+=== Charly ($499, at G1 Pacific Avenue) goes: ===
+roll: 7, ([5, 2])
+Charly goes to: LT Luxury Tax
+Charly pays Luxury Tax $100
+
+== GAME 1 Turn 12 ===
+- LLM1: $1392 (net $1392), at position 18 (D2 Tennessee Avenue)
+- LLM2: $1224 (net $1224), at position 0 (GO)
+- Bob: $400 (net $1430), at position 26 (F1 Atlantic Avenue)
+- Charly: $399 (net $1239), at position 38 (LT Luxury Tax)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1392, at D2 Tennessee Avenue) goes: ===
+roll: 7, ([1, 6])
+LLM1 goes to: R3 B&O Railroad
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on R3 B&O Railroad
+=== LLM2 ($1224, at GO) goes: ===
+roll: 8, ([6, 2])
+LLM2 goes to: B2 Vermont Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $6
+=== Bob ($400, at F1 Atlantic Avenue) goes: ===
+roll: 7, ([6, 1])
+Bob goes to: COM3 Community Chest
+Bob drew Community Chest card: 'Doctor's fee. Pay $50'
+=== Charly ($405, at LT Luxury Tax) goes: ===
+roll: 8, ([6, 2])
+ Charly receives salary $200
+Charly goes to: B1 Oriental Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $6
+
+== GAME 1 Turn 13 ===
+- LLM1: $1392 (net $1392), at position 25 (R3 B&O Railroad)
+- LLM2: $1218 (net $1218), at position 8 (B2 Vermont Avenue)
+- Bob: $356 (net $1386), at position 33 (COM3 Community Chest)
+- Charly: $599 (net $1439), at position 6 (B1 Oriental Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1392, at R3 B&O Railroad) goes: ===
+roll: 6, ([4, 2])
+LLM1 goes to: G1 Pacific Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on G1 Pacific Avenue
+=== LLM2 ($1218, at B2 Vermont Avenue) goes: ===
+roll: 5, ([2, 3])
+LLM2 goes to: C2 States Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on C2 States Avenue
+=== Bob ($356, at COM3 Community Chest) goes: ===
+roll: 9, ([3, 6])
+ Bob receives salary $200
+Bob goes to: COM1 Community Chest
+Bob drew Community Chest card: 'From sale of stock you get $50'
+Bob gets $50
+=== Charly ($599, at B1 Oriental Avenue) goes: ===
+roll: 7, ([5, 2])
+Charly goes to: C2 States Avenue
+Charly bought C2 States Avenue for $140
+
+== GAME 1 Turn 14 ===
+- LLM1: $1392 (net $1392), at position 31 (G1 Pacific Avenue)
+- LLM2: $1218 (net $1218), at position 13 (C2 States Avenue)
+- Bob: $606 (net $1636), at position 2 (COM1 Community Chest)
+- Charly: $459 (net $1439), at position 13 (C2 States Avenue)
+Available houses/hotels: 36/12
+
+=== LLM1 ($1392, at G1 Pacific Avenue) goes: ===
+roll: 9, ([5, 4])
+ LLM1 receives salary $200
+LLM1 goes to: GO
+=== LLM2 ($1218, at C2 States Avenue) goes: ===
+roll: 4, ([2, 2],double)
+LLM2 goes to: COM2 Community Chest
+LLM2 drew Community Chest card: 'Advance to Go (Collect $200)'
+LLM2 goes to GO
+ LLM2 receives salary $200
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($1418, at GO) goes: ===
+roll: 7, ([6, 1])
+LLM2 goes to: CH1 Chance
+LLM2 drew Chance card: 'Take a trip to Reading Railroad. If you pass Go, collect $200'
+LLM2 goes to R1 Reading Railroad
+ LLM2 receives salary $200
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $25
+=== Bob ($606, at COM1 Community Chest) goes: ===
+roll: 7, ([4, 3])
+Bob goes to: B3 Connecticut Avenue
+Own property, no rent
+=== Charly ($484, at C2 States Avenue) goes: ===
+Charly built 1st house on C1 St. Charles Place for $100
+Charly built 1st house on C3 Virginia Avenue for $100
+roll: 9, ([6, 3])
+Charly goes to: CH2 Chance
+Charly drew Chance card: 'Your building loan matures. Collect $150'
+Charly gets $150
+
+== GAME 1 Turn 15 ===
+- LLM1: $1592 (net $1592), at position 0 (GO)
+- LLM2: $1593 (net $1593), at position 5 (R1 Reading Railroad)
+- Bob: $606 (net $1636), at position 9 (B3 Connecticut Avenue)
+- Charly: $434 (net $1614), at position 22 (CH2 Chance)
+Available houses/hotels: 34/12
+
+=== LLM1 ($1592, at GO) goes: ===
+roll: 11, ([6, 5])
+LLM1 goes to: C1 St. Charles Place
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $50
+=== LLM2 ($1593, at R1 Reading Railroad) goes: ===
+roll: 5, ([2, 3])
+LLM2 goes to: JL Jail
+=== Bob ($606, at B3 Connecticut Avenue) goes: ===
+roll: 4, ([3, 1])
+Bob goes to: C2 States Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $20
+=== Charly ($504, at CH2 Chance) goes: ===
+Charly built 1st house on C2 States Avenue for $100
+Charly built 2nd house on C1 St. Charles Place for $100
+Charly built 2nd house on C3 Virginia Avenue for $100
+roll: 12, ([6, 6],double)
+Charly goes to: G3 Pennsylvania Avenue
+Charly landed on a G3 Pennsylvania Avenue, he refuses to buy it
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($204, at G3 Pennsylvania Avenue) goes: ===
+roll: 6, ([3, 3],double)
+ Charly receives salary $200
+Charly goes to: GO
+Charly rolled a double (2 in a row) so they go again.
+=== Charly ($404, at GO) goes: ===
+Charly built 2nd house on C2 States Avenue for $100
+Charly built 3rd house on C1 St. Charles Place for $100
+roll: 12, ([6, 6],double)
+Charly rolled 3 doubles in a row, and goes to Jail.
+
+== GAME 1 Turn 16 ===
+- LLM1: $1542 (net $1542), at position 11 (C1 St. Charles Place)
+- LLM2: $1593 (net $1593), at position 10 (JL Jail)
+- Bob: $586 (net $1616), at position 13 (C2 States Avenue)
+- Charly: $204 (net $1884), at position 10 (JL Jail)
+Available houses/hotels: 29/12
+
+=== LLM1 ($1542, at C1 St. Charles Place) goes: ===
+roll: 10, ([6, 4])
+LLM1 goes to: E1 Kentucky Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on E1 Kentucky Avenue
+=== LLM2 ($1593, at JL Jail) goes: ===
+roll: 9, ([3, 6])
+LLM2 goes to: D3 New York Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $16
+=== Bob ($602, at C2 States Avenue) goes: ===
+roll: 4, ([3, 1])
+Bob goes to: COM2 Community Chest
+Bob drew Community Chest card: 'Bank error in your favor. Collect $200'
+Bob gets $200
+=== Charly ($204, at JL Jail) goes: ===
+roll: 7, ([2, 5])
+Charly stays in jail
+
+== GAME 1 Turn 17 ===
+- LLM1: $1542 (net $1542), at position 21 (E1 Kentucky Avenue)
+- LLM2: $1577 (net $1577), at position 19 (D3 New York Avenue)
+- Bob: $802 (net $1832), at position 17 (COM2 Community Chest)
+- Charly: $204 (net $1884), at position 10 (JL Jail)
+Available houses/hotels: 29/12
+
+=== LLM1 ($1542, at E1 Kentucky Avenue) goes: ===
+roll: 6, ([5, 1])
+LLM1 goes to: F2 Ventnor Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on F2 Ventnor Avenue
+=== LLM2 ($1577, at D3 New York Avenue) goes: ===
+roll: 7, ([2, 5])
+LLM2 goes to: F1 Atlantic Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on F1 Atlantic Avenue
+=== Bob ($802, at COM2 Community Chest) goes: ===
+roll: 10, ([4, 6])
+Bob goes to: F2 Ventnor Avenue
+Bob bought F2 Ventnor Avenue for $260
+=== Charly ($204, at JL Jail) goes: ===
+roll: 7, ([3, 4])
+Charly stays in jail
+
+== GAME 1 Turn 18 ===
+- LLM1: $1542 (net $1542), at position 27 (F2 Ventnor Avenue)
+- LLM2: $1577 (net $1577), at position 26 (F1 Atlantic Avenue)
+- Bob: $542 (net $1832), at position 27 (F2 Ventnor Avenue)
+- Charly: $204 (net $1884), at position 10 (JL Jail)
+Available houses/hotels: 29/12
+
+=== LLM1 ($1542, at F2 Ventnor Avenue) goes: ===
+roll: 7, ([5, 2])
+LLM1 goes to: G3 Pennsylvania Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on G3 Pennsylvania Avenue
+=== LLM2 ($1577, at F1 Atlantic Avenue) goes: ===
+roll: 3, ([2, 1])
+LLM2 goes to: F3 Marvin Gardens
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on F3 Marvin Gardens
+=== Bob ($542, at F2 Ventnor Avenue) goes: ===
+roll: 9, ([3, 6])
+Bob goes to: CH3 Chance
+Bob drew Chance card: 'Advance to Illinois Avenue. If you pass Go, collect $200'
+Bob goes to E3 Illinois Avenue
+ Bob receives salary $200
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $20
+=== Charly ($224, at JL Jail) goes: ===
+roll: 8, ([6, 2])
+Charly did not rolled a double for the third time, pays 50 and leaves jail
+Charly goes to: D2 Tennessee Avenue
+Charly landed on a D2 Tennessee Avenue, he refuses to buy it
+
+== GAME 1 Turn 19 ===
+- LLM1: $1542 (net $1542), at position 34 (G3 Pennsylvania Avenue)
+- LLM2: $1577 (net $1577), at position 29 (F3 Marvin Gardens)
+- Bob: $722 (net $2012), at position 24 (E3 Illinois Avenue)
+- Charly: $174 (net $1854), at position 18 (D2 Tennessee Avenue)
+Available houses/hotels: 29/12
+
+=== LLM1 ($1542, at G3 Pennsylvania Avenue) goes: ===
+roll: 2, ([1, 1],double)
+LLM1 goes to: CH3 Chance
+LLM1 drew Chance card: 'You have been elected Chairman of the Board. Pay each player $50'
+LLM1 pays LLM2 $50
+LLM1 pays Bob $50
+LLM1 pays Charly $50
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1392, at CH3 Chance) goes: ===
+roll: 6, ([2, 4])
+ LLM1 receives salary $200
+LLM1 goes to: COM1 Community Chest
+LLM1 drew Community Chest card: 'You are assessed for street repair. $40 per house. $115 per hotel'
+Repair cost: $0
+=== LLM2 ($1627, at F3 Marvin Gardens) goes: ===
+roll: 7, ([5, 2])
+LLM2 goes to: CH3 Chance
+LLM2 drew Chance card: 'Advance to the nearest Railroad. If owned, pay owner twice the rental to which they are otherwise entitled'
+LLM2 goes to R1 Reading Railroad
+ LLM2 receives salary $200
+LLM2 landed on a property, owned by Charly
+Per Chance card, rent is doubled ($50).
+LLM2 pays Charly rent $50
+=== Bob ($772, at E3 Illinois Avenue) goes: ===
+roll: 6, ([3, 3],double)
+Bob goes to: GTJ Go To Jail
+Bob landed on Go To Jail, and goes to Jail.
+=== Charly ($274, at D2 Tennessee Avenue) goes: ===
+roll: 7, ([5, 2])
+Charly goes to: R3 B&O Railroad
+Charly landed on a R3 B&O Railroad, he refuses to buy it
+
+== GAME 1 Turn 20 ===
+- LLM1: $1592 (net $1592), at position 2 (COM1 Community Chest)
+- LLM2: $1777 (net $1777), at position 5 (R1 Reading Railroad)
+- Bob: $772 (net $2062), at position 10 (JL Jail)
+- Charly: $274 (net $1954), at position 25 (R3 B&O Railroad)
+Available houses/hotels: 29/12
+
+=== LLM1 ($1592, at COM1 Community Chest) goes: ===
+roll: 5, ([4, 1])
+LLM1 goes to: CH1 Chance
+LLM1 drew Chance card: 'Get Out of Jail Free'
+LLM1 now has a 'Get Out of Jail Free' card
+=== LLM2 ($1777, at R1 Reading Railroad) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: B2 Vermont Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $6
+=== Bob ($772, at JL Jail) goes: ===
+roll: 5, ([2, 3])
+Bob stays in jail
+=== Charly ($280, at R3 B&O Railroad) goes: ===
+roll: 8, ([4, 4],double)
+Charly goes to: COM3 Community Chest
+Charly drew Community Chest card: 'You have won second prize in a beauty contest. Collect $10'
+Charly gets $10
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($290, at COM3 Community Chest) goes: ===
+roll: 10, ([5, 5],double)
+ Charly receives salary $200
+Charly goes to: A2 Baltic Avenue
+Charly bought A2 Baltic Avenue for $60
+Charly rolled a double (2 in a row) so they go again.
+=== Charly ($430, at A2 Baltic Avenue) goes: ===
+Trade: Charly gives ['B2 Vermont Avenue'], receives ['A1 Mediterranean Avenue'] from Bob
+Charly received price difference compensation $40 from Bob
+Charly built 1st house on A2 Baltic Avenue for $50
+Charly built 1st house on A1 Mediterranean Avenue for $50
+Charly built 2nd house on A2 Baltic Avenue for $50
+Charly built 2nd house on A1 Mediterranean Avenue for $50
+Charly built 3rd house on A2 Baltic Avenue for $50
+roll: 5, ([2, 3])
+Charly goes to: B2 Vermont Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $12
+
+== GAME 1 Turn 21 ===
+- LLM1: $1592 (net $1592), at position 7 (CH1 Chance)
+- LLM2: $1771 (net $1771), at position 8 (B2 Vermont Avenue)
+- Bob: $744 (net $2074), at position 10 (JL Jail)
+- Charly: $208 (net $2158), at position 8 (B2 Vermont Avenue)
+Available houses/hotels: 24/12
+
+=== LLM1 ($1592, at CH1 Chance) goes: ===
+roll: 9, ([3, 6])
+LLM1 goes to: D1 St. James Place
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on D1 St. James Place
+=== LLM2 ($1771, at B2 Vermont Avenue) goes: ===
+roll: 4, ([1, 3])
+LLM2 goes to: U1 Electric Company
+LLM2 landed on a property, owned by Bob
+roll: 7, ([4, 3])
+LLM2 pays Bob rent $28
+=== Bob ($772, at JL Jail) goes: ===
+Bob built 1st house on B1 Oriental Avenue for $50
+Bob built 1st house on B3 Connecticut Avenue for $50
+Bob built 1st house on B2 Vermont Avenue for $50
+Bob built 2nd house on B1 Oriental Avenue for $50
+Bob built 2nd house on B3 Connecticut Avenue for $50
+Bob built 2nd house on B2 Vermont Avenue for $50
+Bob built 3rd house on B1 Oriental Avenue for $50
+Bob built 3rd house on B3 Connecticut Avenue for $50
+Bob built 3rd house on B2 Vermont Avenue for $50
+Bob built 4th house on B1 Oriental Avenue for $50
+Bob built 4th house on B3 Connecticut Avenue for $50
+roll: 6, ([3, 3],double)
+Bob rolled a double, a leaves jail for free
+Bob goes to: D1 St. James Place
+Bob landed on a D1 St. James Place, he refuses to buy it
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($222, at D1 St. James Place) goes: ===
+roll: 4, ([1, 3])
+Bob goes to: FP Free Parking
+=== Charly ($208, at B2 Vermont Avenue) goes: ===
+roll: 6, ([5, 1])
+Charly goes to: C3 Virginia Avenue
+Own property, no rent
+
+== GAME 1 Turn 22 ===
+- LLM1: $1592 (net $1592), at position 16 (D1 St. James Place)
+- LLM2: $1743 (net $1743), at position 12 (U1 Electric Company)
+- Bob: $222 (net $2102), at position 20 (FP Free Parking)
+- Charly: $208 (net $2158), at position 14 (C3 Virginia Avenue)
+Available houses/hotels: 13/12
+
+=== LLM1 ($1592, at D1 St. James Place) goes: ===
+roll: 6, ([1, 5])
+LLM1 goes to: CH2 Chance
+LLM1 drew Chance card: 'Advance to the nearest Railroad. If owned, pay owner twice the rental to which they are otherwise entitled'
+LLM1 goes to R3 B&O Railroad
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on R3 B&O Railroad
+=== LLM2 ($1743, at U1 Electric Company) goes: ===
+roll: 7, ([3, 4])
+LLM2 goes to: D3 New York Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $16
+=== Bob ($238, at FP Free Parking) goes: ===
+roll: 9, ([3, 6])
+Bob goes to: F3 Marvin Gardens
+Bob landed on a F3 Marvin Gardens, he refuses to buy it
+=== Charly ($208, at C3 Virginia Avenue) goes: ===
+roll: 5, ([3, 2])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $16
+
+== GAME 1 Turn 23 ===
+- LLM1: $1592 (net $1592), at position 25 (R3 B&O Railroad)
+- LLM2: $1727 (net $1727), at position 19 (D3 New York Avenue)
+- Bob: $254 (net $2134), at position 29 (F3 Marvin Gardens)
+- Charly: $192 (net $2142), at position 19 (D3 New York Avenue)
+Available houses/hotels: 13/12
+
+=== LLM1 ($1592, at R3 B&O Railroad) goes: ===
+roll: 9, ([6, 3])
+LLM1 goes to: G3 Pennsylvania Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on G3 Pennsylvania Avenue
+=== LLM2 ($1727, at D3 New York Avenue) goes: ===
+roll: 8, ([6, 2])
+LLM2 goes to: F2 Ventnor Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $22
+=== Bob ($276, at F3 Marvin Gardens) goes: ===
+Bob built 4th house on B2 Vermont Avenue for $50
+roll: 3, ([1, 2])
+Bob goes to: G2 North Carolina Avenue
+Bob landed on a G2 North Carolina Avenue, he refuses to buy it
+=== Charly ($192, at D3 New York Avenue) goes: ===
+roll: 4, ([1, 3])
+Charly goes to: E2 Indiana Avenue
+Charly landed on a E2 Indiana Avenue, he refuses to buy it
+
+== GAME 1 Turn 24 ===
+- LLM1: $1592 (net $1592), at position 34 (G3 Pennsylvania Avenue)
+- LLM2: $1705 (net $1705), at position 27 (F2 Ventnor Avenue)
+- Bob: $226 (net $2156), at position 32 (G2 North Carolina Avenue)
+- Charly: $192 (net $2142), at position 23 (E2 Indiana Avenue)
+Available houses/hotels: 12/12
+
+=== LLM1 ($1592, at G3 Pennsylvania Avenue) goes: ===
+roll: 8, ([2, 6])
+ LLM1 receives salary $200
+LLM1 goes to: COM1 Community Chest
+LLM1 drew Community Chest card: 'Holiday fund matures. Receive $100'
+LLM1 gets $100
+=== LLM2 ($1705, at F2 Ventnor Avenue) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: GTJ Go To Jail
+LLM2 landed on Go To Jail, and goes to Jail.
+=== Bob ($226, at G2 North Carolina Avenue) goes: ===
+roll: 9, ([3, 6])
+ Bob receives salary $200
+Bob goes to: A1 Mediterranean Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $30
+=== Charly ($222, at E2 Indiana Avenue) goes: ===
+roll: 4, ([1, 3])
+Charly goes to: F2 Ventnor Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $22
+
+== GAME 1 Turn 25 ===
+- LLM1: $1892 (net $1892), at position 2 (COM1 Community Chest)
+- LLM2: $1705 (net $1705), at position 10 (JL Jail)
+- Bob: $418 (net $2348), at position 1 (A1 Mediterranean Avenue)
+- Charly: $200 (net $2150), at position 27 (F2 Ventnor Avenue)
+Available houses/hotels: 12/12
+
+=== LLM1 ($1892, at COM1 Community Chest) goes: ===
+roll: 6, ([3, 3],double)
+LLM1 goes to: B2 Vermont Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $400
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1492, at B2 Vermont Avenue) goes: ===
+roll: 5, ([2, 3])
+LLM1 goes to: C2 States Avenue
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $150
+=== LLM2 ($1705, at JL Jail) goes: ===
+roll: 5, ([1, 4])
+LLM2 stays in jail
+=== Bob ($818, at A1 Mediterranean Avenue) goes: ===
+Bob built a hotel on B1 Oriental Avenue
+Bob built a hotel on B3 Connecticut Avenue
+Bob built a hotel on B2 Vermont Avenue
+roll: 7, ([4, 3])
+Bob goes to: B2 Vermont Avenue
+Own property, no rent
+=== Charly ($350, at F2 Ventnor Avenue) goes: ===
+Charly built 3rd house on A1 Mediterranean Avenue for $50
+Charly built 4th house on A2 Baltic Avenue for $50
+Charly built 4th house on A1 Mediterranean Avenue for $50
+roll: 3, ([1, 2])
+Charly goes to: GTJ Go To Jail
+Charly landed on Go To Jail, and goes to Jail.
+
+== GAME 1 Turn 26 ===
+- LLM1: $1342 (net $1342), at position 13 (C2 States Avenue)
+- LLM2: $1705 (net $1705), at position 10 (JL Jail)
+- Bob: $668 (net $2148), at position 8 (B2 Vermont Avenue)
+- Charly: $200 (net $2300), at position 10 (JL Jail)
+Available houses/hotels: 21/9
+
+=== LLM1 ($1342, at C2 States Avenue) goes: ===
+roll: 3, ([1, 2])
+LLM1 goes to: D1 St. James Place
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on D1 St. James Place
+=== LLM2 ($1705, at JL Jail) goes: ===
+roll: 2, ([1, 1],double)
+LLM2 rolled a double, a leaves jail for free
+LLM2 goes to: U1 Electric Company
+LLM2 landed on a property, owned by Bob
+roll: 8, ([6, 2])
+LLM2 pays Bob rent $32
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($1673, at U1 Electric Company) goes: ===
+roll: 10, ([6, 4])
+LLM2 goes to: CH2 Chance
+LLM2 drew Chance card: 'Advance token to nearest Utility. If owned, throw dice and pay owner a total ten times amount thrown.'
+LLM2 goes to U2 Waterworks
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on U2 Waterworks
+=== Bob ($700, at B2 Vermont Avenue) goes: ===
+roll: 6, ([1, 5])
+Bob goes to: C3 Virginia Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $180
+=== Charly ($380, at JL Jail) goes: ===
+Charly built a hotel on A2 Baltic Avenue
+Charly built a hotel on A1 Mediterranean Avenue
+roll: 3, ([2, 1])
+Charly stays in jail
+
+== GAME 1 Turn 27 ===
+- LLM1: $1342 (net $1342), at position 16 (D1 St. James Place)
+- LLM2: $1673 (net $1673), at position 28 (U2 Waterworks)
+- Bob: $520 (net $2000), at position 14 (C3 Virginia Avenue)
+- Charly: $280 (net $2080), at position 10 (JL Jail)
+Available houses/hotels: 29/7
+
+=== LLM1 ($1342, at D1 St. James Place) goes: ===
+roll: 10, ([5, 5],double)
+LLM1 goes to: F1 Atlantic Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on F1 Atlantic Avenue
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1342, at F1 Atlantic Avenue) goes: ===
+roll: 5, ([2, 3])
+LLM1 goes to: G1 Pacific Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on G1 Pacific Avenue
+=== LLM2 ($1673, at U2 Waterworks) goes: ===
+roll: 3, ([2, 1])
+LLM2 goes to: G1 Pacific Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on G1 Pacific Avenue
+=== Bob ($520, at C3 Virginia Avenue) goes: ===
+roll: 6, ([2, 4])
+Bob goes to: FP Free Parking
+=== Charly ($280, at JL Jail) goes: ===
+roll: 4, ([1, 3])
+Charly stays in jail
+
+== GAME 1 Turn 28 ===
+- LLM1: $1342 (net $1342), at position 31 (G1 Pacific Avenue)
+- LLM2: $1673 (net $1673), at position 31 (G1 Pacific Avenue)
+- Bob: $520 (net $2000), at position 20 (FP Free Parking)
+- Charly: $280 (net $2080), at position 10 (JL Jail)
+Available houses/hotels: 29/7
+
+=== LLM1 ($1342, at G1 Pacific Avenue) goes: ===
+roll: 7, ([3, 4])
+LLM1 goes to: LT Luxury Tax
+LLM1 pays Luxury Tax $100
+=== LLM2 ($1673, at G1 Pacific Avenue) goes: ===
+roll: 12, ([6, 6],double)
+ LLM2 receives salary $200
+LLM2 goes to: A2 Baltic Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $450
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($1423, at A2 Baltic Avenue) goes: ===
+roll: 9, ([5, 4])
+LLM2 goes to: U1 Electric Company
+LLM2 landed on a property, owned by Bob
+roll: 2, ([1, 1],double)
+LLM2 pays Bob rent $8
+=== Bob ($528, at FP Free Parking) goes: ===
+roll: 9, ([6, 3])
+Bob goes to: F3 Marvin Gardens
+Bob bought F3 Marvin Gardens for $280
+=== Charly ($730, at JL Jail) goes: ===
+Charly built 3rd house on C3 Virginia Avenue for $100
+Charly built 3rd house on C2 States Avenue for $100
+Charly built 4th house on C1 St. Charles Place for $100
+Charly built 4th house on C3 Virginia Avenue for $100
+Charly built 4th house on C2 States Avenue for $100
+roll: 4, ([1, 3])
+Charly did not rolled a double for the third time, pays 50 and leaves jail
+Charly goes to: C3 Virginia Avenue
+Own property, no rent
+
+== GAME 1 Turn 29 ===
+- LLM1: $1242 (net $1242), at position 38 (LT Luxury Tax)
+- LLM2: $1415 (net $1415), at position 12 (U1 Electric Company)
+- Bob: $248 (net $2008), at position 29 (F3 Marvin Gardens)
+- Charly: $180 (net $2480), at position 14 (C3 Virginia Avenue)
+Available houses/hotels: 24/7
+
+=== LLM1 ($1242, at LT Luxury Tax) goes: ===
+roll: 7, ([6, 1])
+ LLM1 receives salary $200
+LLM1 goes to: R1 Reading Railroad
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $25
+=== LLM2 ($1415, at U1 Electric Company) goes: ===
+roll: 11, ([5, 6])
+LLM2 goes to: E2 Indiana Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on E2 Indiana Avenue
+=== Bob ($248, at F3 Marvin Gardens) goes: ===
+roll: 7, ([1, 6])
+Bob goes to: CH3 Chance
+Bob drew Chance card: 'Advance to Boardwalk'
+Bob goes to H2 Boardwalk
+Own property, no rent
+=== Charly ($205, at C3 Virginia Avenue) goes: ===
+roll: 5, ([2, 3])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $16
+
+== GAME 1 Turn 30 ===
+- LLM1: $1417 (net $1417), at position 5 (R1 Reading Railroad)
+- LLM2: $1415 (net $1415), at position 23 (E2 Indiana Avenue)
+- Bob: $264 (net $2024), at position 39 (H2 Boardwalk)
+- Charly: $189 (net $2489), at position 19 (D3 New York Avenue)
+Available houses/hotels: 24/7
+
+=== LLM1 ($1417, at R1 Reading Railroad) goes: ===
+roll: 12, ([6, 6],double)
+LLM1 goes to: COM2 Community Chest
+LLM1 drew Community Chest card: 'Receive $25 consultancy fee'
+LLM1 gets $25
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1442, at COM2 Community Chest) goes: ===
+roll: 8, ([3, 5])
+LLM1 goes to: R3 B&O Railroad
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on R3 B&O Railroad
+=== LLM2 ($1415, at E2 Indiana Avenue) goes: ===
+roll: 7, ([4, 3])
+LLM2 goes to: GTJ Go To Jail
+LLM2 landed on Go To Jail, and goes to Jail.
+=== Bob ($264, at H2 Boardwalk) goes: ===
+roll: 5, ([1, 4])
+ Bob receives salary $200
+Bob goes to: IT Income Tax
+Bob pays fixed Income tax 200
+=== Charly ($189, at D3 New York Avenue) goes: ===
+roll: 9, ([6, 3])
+Charly goes to: U2 Waterworks
+Charly landed on a U2 Waterworks, he refuses to buy it
+
+== GAME 1 Turn 31 ===
+- LLM1: $1442 (net $1442), at position 25 (R3 B&O Railroad)
+- LLM2: $1415 (net $1415), at position 10 (JL Jail)
+- Bob: $264 (net $2024), at position 4 (IT Income Tax)
+- Charly: $189 (net $2489), at position 28 (U2 Waterworks)
+Available houses/hotels: 24/7
+
+=== LLM1 ($1442, at R3 B&O Railroad) goes: ===
+roll: 2, ([1, 1],double)
+LLM1 goes to: F2 Ventnor Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $22
+LLM1 rolled a double (1 in a row) so they go again.
+=== LLM1 ($1420, at F2 Ventnor Avenue) goes: ===
+roll: 8, ([3, 5])
+LLM1 goes to: R4 Short Line
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on R4 Short Line
+=== LLM2 ($1415, at JL Jail) goes: ===
+roll: 2, ([1, 1],double)
+LLM2 rolled a double, a leaves jail for free
+LLM2 goes to: U1 Electric Company
+LLM2 landed on a property, owned by Bob
+roll: 6, ([5, 1])
+LLM2 pays Bob rent $24
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($1391, at U1 Electric Company) goes: ===
+roll: 6, ([2, 4])
+LLM2 goes to: D2 Tennessee Avenue
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM2 (LLM) passed on D2 Tennessee Avenue
+=== Bob ($310, at IT Income Tax) goes: ===
+roll: 3, ([1, 2])
+Bob goes to: CH1 Chance
+Bob drew Chance card: 'Speeding fine $15'
+=== Charly ($189, at U2 Waterworks) goes: ===
+roll: 6, ([4, 2])
+Charly goes to: G3 Pennsylvania Avenue
+Charly landed on a G3 Pennsylvania Avenue, he refuses to buy it
+
+== GAME 1 Turn 32 ===
+- LLM1: $1420 (net $1420), at position 35 (R4 Short Line)
+- LLM2: $1391 (net $1391), at position 18 (D2 Tennessee Avenue)
+- Bob: $295 (net $2055), at position 7 (CH1 Chance)
+- Charly: $189 (net $2489), at position 34 (G3 Pennsylvania Avenue)
+Available houses/hotels: 24/7
+
+=== LLM1 ($1420, at R4 Short Line) goes: ===
+roll: 9, ([4, 5])
+ LLM1 receives salary $200
+LLM1 goes to: IT Income Tax
+LLM1 pays 10% Income tax 162
+=== LLM2 ($1391, at D2 Tennessee Avenue) goes: ===
+roll: 9, ([6, 3])
+LLM2 goes to: F2 Ventnor Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $22
+=== Bob ($317, at CH1 Chance) goes: ===
+roll: 5, ([2, 3])
+Bob goes to: U1 Electric Company
+Own property, no rent
+=== Charly ($189, at G3 Pennsylvania Avenue) goes: ===
+roll: 4, ([1, 3])
+Charly goes to: LT Luxury Tax
+Charly pays Luxury Tax $100
+
+== GAME 1 Turn 33 ===
+- LLM1: $1458 (net $1458), at position 4 (IT Income Tax)
+- LLM2: $1369 (net $1369), at position 27 (F2 Ventnor Avenue)
+- Bob: $317 (net $2077), at position 12 (U1 Electric Company)
+- Charly: $89 (net $2389), at position 38 (LT Luxury Tax)
+Available houses/hotels: 24/7
+
+=== LLM1 ($1458, at IT Income Tax) goes: ===
+roll: 8, ([5, 3])
+LLM1 goes to: U1 Electric Company
+LLM1 landed on a property, owned by Bob
+roll: 5, ([2, 3])
+LLM1 pays Bob rent $20
+=== LLM2 ($1369, at F2 Ventnor Avenue) goes: ===
+roll: 12, ([6, 6],double)
+LLM2 goes to: H2 Boardwalk
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $50
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($1319, at H2 Boardwalk) goes: ===
+roll: 9, ([4, 5])
+ LLM2 receives salary $200
+LLM2 goes to: B2 Vermont Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $550
+=== Bob ($937, at U1 Electric Company) goes: ===
+roll: 9, ([5, 4])
+Bob goes to: E1 Kentucky Avenue
+Bob bought E1 Kentucky Avenue for $220
+=== Charly ($89, at LT Luxury Tax) goes: ===
+roll: 10, ([6, 4])
+ Charly receives salary $200
+Charly goes to: B2 Vermont Avenue
+Charly landed on a property, owned by Bob
+Charly has $289, he can pay $550, but needs to mortgage/sell some things for that
+Charly sells 4th house on C2 States Avenue, raising $50
+Charly sells 4th house on C3 Virginia Avenue, raising $50
+Charly sells 4th house on C1 St. Charles Place, raising $50
+Charly sells 3rd house on C2 States Avenue, raising $50
+Charly sells 3rd house on C3 Virginia Avenue, raising $50
+Charly sells 3rd house on C1 St. Charles Place, raising $50
+Charly pays Bob rent $550
+
+== GAME 1 Turn 34 ===
+- LLM1: $1438 (net $1438), at position 12 (U1 Electric Company)
+- LLM2: $969 (net $969), at position 8 (B2 Vermont Avenue)
+- Bob: $1267 (net $3247), at position 21 (E1 Kentucky Avenue)
+- Charly: $39 (net $1739), at position 8 (B2 Vermont Avenue)
+Available houses/hotels: 30/7
+
+=== LLM1 ($1438, at U1 Electric Company) goes: ===
+roll: 10, ([6, 4])
+LLM1 goes to: CH2 Chance
+LLM1 drew Chance card: 'Advance to Go (Collect $200)'
+LLM1 goes to GO
+ LLM1 receives salary $200
+=== LLM2 ($969, at B2 Vermont Avenue) goes: ===
+roll: 6, ([4, 2])
+LLM2 goes to: C3 Virginia Avenue
+LLM2 landed on a property, owned by Charly
+LLM2 pays Charly rent $180
+=== Bob ($1267, at E1 Kentucky Avenue) goes: ===
+roll: 4, ([2, 2],double)
+Bob goes to: R3 B&O Railroad
+Bob bought R3 B&O Railroad for $200
+Bob rolled a double (1 in a row) so they go again.
+=== Bob ($1067, at R3 B&O Railroad) goes: ===
+roll: 7, ([6, 1])
+Bob goes to: G2 North Carolina Avenue
+Bob bought G2 North Carolina Avenue for $300
+=== Charly ($219, at B2 Vermont Avenue) goes: ===
+roll: 11, ([5, 6])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $16
+
+== GAME 1 Turn 35 ===
+- LLM1: $1638 (net $1638), at position 0 (GO)
+- LLM2: $789 (net $789), at position 14 (C3 Virginia Avenue)
+- Bob: $783 (net $3263), at position 32 (G2 North Carolina Avenue)
+- Charly: $203 (net $1903), at position 19 (D3 New York Avenue)
+Available houses/hotels: 30/7
+
+=== LLM1 ($1638, at GO) goes: ===
+roll: 8, ([6, 2])
+LLM1 goes to: B2 Vermont Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $550
+=== LLM2 ($789, at C3 Virginia Avenue) goes: ===
+roll: 6, ([5, 1])
+LLM2 goes to: FP Free Parking
+=== Bob ($1333, at G2 North Carolina Avenue) goes: ===
+roll: 9, ([5, 4])
+ Bob receives salary $200
+Bob goes to: A1 Mediterranean Avenue
+Bob landed on a property, owned by Charly
+Bob pays Charly rent $250
+=== Charly ($453, at D3 New York Avenue) goes: ===
+Charly built 3rd house on C1 St. Charles Place for $100
+Charly built 3rd house on C3 Virginia Avenue for $100
+roll: 7, ([6, 1])
+Charly goes to: F1 Atlantic Avenue
+Charly landed on a F1 Atlantic Avenue, he refuses to buy it
+
+== GAME 1 Turn 36 ===
+- LLM1: $1088 (net $1088), at position 8 (B2 Vermont Avenue)
+- LLM2: $789 (net $789), at position 20 (FP Free Parking)
+- Bob: $1283 (net $3763), at position 1 (A1 Mediterranean Avenue)
+- Charly: $253 (net $2153), at position 26 (F1 Atlantic Avenue)
+Available houses/hotels: 28/7
+
+=== LLM1 ($1088, at B2 Vermont Avenue) goes: ===
+roll: 8, ([3, 5])
+LLM1 goes to: D1 St. James Place
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on D1 St. James Place
+=== LLM2 ($789, at FP Free Parking) goes: ===
+roll: 7, ([4, 3])
+LLM2 goes to: F2 Ventnor Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $22
+=== Bob ($1305, at A1 Mediterranean Avenue) goes: ===
+roll: 8, ([6, 2])
+Bob goes to: B3 Connecticut Avenue
+Own property, no rent
+=== Charly ($253, at F1 Atlantic Avenue) goes: ===
+roll: 5, ([3, 2])
+Charly goes to: G1 Pacific Avenue
+Charly landed on a G1 Pacific Avenue, he refuses to buy it
+
+== GAME 1 Turn 37 ===
+- LLM1: $1088 (net $1088), at position 16 (D1 St. James Place)
+- LLM2: $767 (net $767), at position 27 (F2 Ventnor Avenue)
+- Bob: $1305 (net $3785), at position 9 (B3 Connecticut Avenue)
+- Charly: $253 (net $2153), at position 31 (G1 Pacific Avenue)
+Available houses/hotels: 28/7
+
+=== LLM1 ($1088, at D1 St. James Place) goes: ===
+roll: 6, ([2, 4])
+LLM1 goes to: CH2 Chance
+LLM1 drew Chance card: 'Advance to St. Charles Place. If you pass Go, collect $200'
+LLM1 goes to C1 St. Charles Place
+ LLM1 receives salary $200
+LLM1 landed on a property, owned by Charly
+LLM1 pays Charly rent $450
+=== LLM2 ($767, at F2 Ventnor Avenue) goes: ===
+roll: 2, ([1, 1],double)
+LLM2 goes to: F3 Marvin Gardens
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $24
+LLM2 rolled a double (1 in a row) so they go again.
+=== LLM2 ($743, at F3 Marvin Gardens) goes: ===
+roll: 3, ([1, 2])
+LLM2 goes to: G2 North Carolina Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $26
+=== Bob ($1355, at B3 Connecticut Avenue) goes: ===
+roll: 6, ([5, 1])
+Bob goes to: R2 Pennsylvania Railroad
+Bob bought R2 Pennsylvania Railroad for $200
+=== Charly ($703, at G1 Pacific Avenue) goes: ===
+Charly built 3rd house on C2 States Avenue for $100
+Charly built 4th house on C1 St. Charles Place for $100
+Charly built 4th house on C3 Virginia Avenue for $100
+Charly built 4th house on C2 States Avenue for $100
+Charly built a hotel on C1 St. Charles Place
+roll: 10, ([5, 5],double)
+ Charly receives salary $200
+Charly goes to: A1 Mediterranean Avenue
+Own property, no rent
+Charly rolled a double (1 in a row) so they go again.
+=== Charly ($403, at A1 Mediterranean Avenue) goes: ===
+Charly built a hotel on C3 Virginia Avenue
+Charly built a hotel on C2 States Avenue
+roll: 10, ([4, 6])
+Charly goes to: C1 St. Charles Place
+Own property, no rent
+
+== GAME 1 Turn 38 ===
+- LLM1: $838 (net $838), at position 11 (C1 St. Charles Place)
+- LLM2: $717 (net $717), at position 32 (G2 North Carolina Avenue)
+- Bob: $1155 (net $3835), at position 15 (R2 Pennsylvania Railroad)
+- Charly: $203 (net $1603), at position 11 (C1 St. Charles Place)
+Available houses/hotels: 36/4
+
+=== LLM1 ($838, at C1 St. Charles Place) goes: ===
+roll: 10, ([4, 6])
+LLM1 goes to: E1 Kentucky Avenue
+LLM1 landed on a property, owned by Bob
+LLM1 pays Bob rent $18
+=== LLM2 ($717, at G2 North Carolina Avenue) goes: ===
+roll: 7, ([6, 1])
+LLM2 goes to: H2 Boardwalk
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $50
+=== Bob ($1223, at R2 Pennsylvania Railroad) goes: ===
+roll: 11, ([5, 6])
+Bob goes to: F1 Atlantic Avenue
+Bob bought F1 Atlantic Avenue for $260
+=== Charly ($203, at C1 St. Charles Place) goes: ===
+roll: 8, ([2, 6])
+Charly goes to: D3 New York Avenue
+Charly landed on a property, owned by Bob
+Charly pays Bob rent $16
+
+== GAME 1 Turn 39 ===
+- LLM1: $820 (net $820), at position 21 (E1 Kentucky Avenue)
+- LLM2: $667 (net $667), at position 39 (H2 Boardwalk)
+- Bob: $979 (net $3919), at position 26 (F1 Atlantic Avenue)
+- Charly: $187 (net $1587), at position 19 (D3 New York Avenue)
+Available houses/hotels: 36/4
+
+=== LLM1 ($820, at E1 Kentucky Avenue) goes: ===
+roll: 7, ([3, 4])
+LLM1 goes to: U2 Waterworks
+[PRINT] Llama API error: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download
+LLM1 (LLM) passed on U2 Waterworks
+=== LLM2 ($667, at H2 Boardwalk) goes: ===
+roll: 3, ([1, 2])
+ LLM2 receives salary $200
+LLM2 goes to: COM1 Community Chest
+LLM2 drew Community Chest card: 'Income tax refund. Collect $20'
+LLM2 gets $20
+=== Bob ($979, at F1 Atlantic Avenue) goes: ===
+Bob built 1st house on F2 Ventnor Avenue for $150
+Bob built 1st house on F3 Marvin Gardens for $150
+Bob built 1st house on F1 Atlantic Avenue for $150
+Bob built 2nd house on F2 Ventnor Avenue for $150
+Bob built 2nd house on F3 Marvin Gardens for $150
+roll: 6, ([2, 4])
+Bob goes to: G2 North Carolina Avenue
+Own property, no rent
+=== Charly ($187, at D3 New York Avenue) goes: ===
+roll: 8, ([3, 5])
+Charly goes to: F2 Ventnor Avenue
+Charly landed on a property, owned by Bob
+Charly has $187, he can pay $330, but needs to mortgage/sell some things for that
+Charly sells a hotel on C2 States Avenue, raising $50
+Charly sells a hotel on C3 Virginia Avenue, raising $50
+Charly sells a hotel on C1 St. Charles Place, raising $50
+Charly pays Bob rent $330
+
+== GAME 1 Turn 40 ===
+- LLM1: $820 (net $820), at position 28 (U2 Waterworks)
+- LLM2: $887 (net $887), at position 2 (COM1 Community Chest)
+- Bob: $559 (net $4249), at position 32 (G2 North Carolina Avenue)
+- Charly: $7 (net $2307), at position 27 (F2 Ventnor Avenue)
+Available houses/hotels: 19/7
+
+=== LLM1 ($820, at U2 Waterworks) goes: ===
+roll: 10, ([4, 6])
+LLM1 goes to: LT Luxury Tax
+LLM1 pays Luxury Tax $100
+=== LLM2 ($887, at COM1 Community Chest) goes: ===
+roll: 7, ([3, 4])
+LLM2 goes to: B3 Connecticut Avenue
+LLM2 landed on a property, owned by Bob
+LLM2 pays Bob rent $600
+=== Bob ($1159, at G2 North Carolina Avenue) goes: ===
+Bob built 2nd house on F1 Atlantic Avenue for $150
+Bob built 3rd house on F2 Ventnor Avenue for $150
+Bob built 3rd house on F3 Marvin Gardens for $150
+Bob built 3rd house on F1 Atlantic Avenue for $150
+Bob built 4th house on F2 Ventnor Avenue for $150
+Bob built 4th house on F3 Marvin Gardens for $150
+roll: 7, ([4, 3])
+Bob goes to: H2 Boardwalk
+Own property, no rent
+=== Charly ($7, at F2 Ventnor Avenue) goes: ===
+roll: 5, ([2, 3])
+Charly goes to: G2 North Carolina Avenue
+Charly landed on a property, owned by Bob
+Charly has $7, he can pay $26, but needs to mortgage/sell some things for that
+Charly sells 4th house on C1 St. Charles Place, raising $50
+Charly pays Bob rent $26
+[PRINT] ✓ Chat history saved to /Users/federicobaldan/Desktop/monopoly/results/run_20251203_001334_gpt-oss-20b-cloud/game_1_LLM1_chat_history.txt
+[PRINT] ✓ Chat history saved to /Users/federicobaldan/Desktop/monopoly/results/run_20251203_001334_gpt-oss-20b-cloud/game_1_LLM2_chat_history.txt
+
+== BOARD ==
+- A1 Mediterranean Avenue, Owner: Charly, Rent multiplier: 2, Improvements: hotel
+- A2 Baltic Avenue, Owner: Charly, Rent multiplier: 2, Improvements: hotel
+- R1 Reading Railroad, Owner: Charly, Rent multiplier: 1, Improvements: none
+- B1 Oriental Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- B2 Vermont Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- B3 Connecticut Avenue, Owner: Bob, Rent multiplier: 2, Improvements: hotel
+- C1 St. Charles Place, Owner: Charly, Rent multiplier: 2, Improvements: 3 house(s)
+- U1 Electric Company, Owner: Bob, Rent multiplier: 4, Improvements: none
+- C2 States Avenue, Owner: Charly, Rent multiplier: 2, Improvements: 4 house(s)
+- C3 Virginia Avenue, Owner: Charly, Rent multiplier: 2, Improvements: 4 house(s)
+- R2 Pennsylvania Railroad, Owner: Bob, Rent multiplier: 2, Improvements: none
+- D1 St. James Place, Owner: None, Rent multiplier: 1, Improvements: none
+- D2 Tennessee Avenue, Owner: None, Rent multiplier: 1, Improvements: none
+- D3 New York Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- E1 Kentucky Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- E2 Indiana Avenue, Owner: None, Rent multiplier: 1, Improvements: none
+- E3 Illinois Avenue, Owner: Charly, Rent multiplier: 1, Improvements: none
+- R3 B&O Railroad, Owner: Bob, Rent multiplier: 2, Improvements: none
+- F1 Atlantic Avenue, Owner: Bob, Rent multiplier: 2, Improvements: 3 house(s)
+- F2 Ventnor Avenue, Owner: Bob, Rent multiplier: 2, Improvements: 4 house(s)
+- U2 Waterworks, Owner: None, Rent multiplier: 4, Improvements: none
+- F3 Marvin Gardens, Owner: Bob, Rent multiplier: 2, Improvements: 4 house(s)
+- G1 Pacific Avenue, Owner: None, Rent multiplier: 1, Improvements: none
+- G2 North Carolina Avenue, Owner: Bob, Rent multiplier: 1, Improvements: none
+- G3 Pennsylvania Avenue, Owner: None, Rent multiplier: 1, Improvements: none
+- R4 Short Line, Owner: None, Rent multiplier: 1, Improvements: none
+- H1 Park Place, Owner: None, Rent multiplier: 1, Improvements: none
+- H2 Boardwalk, Owner: Bob, Rent multiplier: 1, Improvements: none
+
